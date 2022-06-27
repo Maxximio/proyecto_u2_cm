@@ -1,7 +1,9 @@
 package com.example.repository;
 
+import com.example.model.Persona;
+
 public interface IPersonaJdbcRepository {
 
-	public 
+	public void insertar(Persona persona);
 	
 }
