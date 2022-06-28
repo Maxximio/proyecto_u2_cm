@@ -1,2 +1,8 @@
 [2022-06-27 08:59:11] [ INFO ] [ProyectoU2CmApplication:22] Hola Mundo
+4[2022-06-27 18:17:03] [ INFO ] [ProyectoU2CmApplication:22] Hola Mundo
+4[2022-06-27 18:17:28] [ ERROR] [ProyectoU2CmApplication:22] Hola Mundo
+4[2022-06-27 18:21:25] [ DEBUG] [ProyectoU2CmApplication:22] Hola Mundo
+4[2022-06-27 19:19:19] [ INFO ] [ProyectoU2CmApplication:30] Hola Mundo
+4[2022-06-27 19:22:30] [ INFO ] [ProyectoU2CmApplication:30] Hola Mundo
+4[2022-06-27 20:13:22] [ INFO ] [ProyectoU2CmApplication:53] Persona [id=4, nombre=Mateo, apellido=Perez]
 4
