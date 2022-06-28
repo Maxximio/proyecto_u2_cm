@@ -5,4 +5,12 @@
 4[2022-06-27 19:19:19] [ INFO ] [ProyectoU2CmApplication:30] Hola Mundo
 4[2022-06-27 19:22:30] [ INFO ] [ProyectoU2CmApplication:30] Hola Mundo
 4[2022-06-27 20:13:22] [ INFO ] [ProyectoU2CmApplication:53] Persona [id=4, nombre=Mateo, apellido=Perez]
+4[2022-06-27 20:18:34] [ INFO ] [ProyectoU2CmApplication:53] Persona [id=4, nombre=Snatiago, apellido=Velez]
+4[2022-06-28 08:55:22] [ INFO ] [ProyectoU2CmApplication:28] **************Se ha insertado el estudiante a DB**************
+4[2022-06-28 08:55:22] [ INFO ] [ProyectoU2CmApplication:33] El resultado de la busqueda es:
+4[2022-06-28 08:55:22] [ INFO ] [ProyectoU2CmApplication:43] Estudiante [cedula=12454, nombre=Carlos, apellido=Montalvo, carrera=Ing Civil, semestre=3]
+4[2022-06-28 08:55:22] [ INFO ] [ProyectoU2CmApplication:44] **************Se ha actualizado el estudiante a DB**************
+4[2022-06-28 08:55:22] [ INFO ] [ProyectoU2CmApplication:33] El resultado de la busqueda es:
+4[2022-06-28 08:55:22] [ INFO ] [ProyectoU2CmApplication:49] Estudiante [cedula=12454, nombre=Carlos, apellido=Montalvo, carrera=Ing Civil, semestre=4]
+4[2022-06-28 08:55:22] [ INFO ] [ProyectoU2CmApplication:51] **************Se ha eliminado el estudiante a DB**************
 4
