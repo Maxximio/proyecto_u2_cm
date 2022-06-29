@@ -7,22 +7,18 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import com.example.demo.model.Estudiante;
-import com.example.demo.model.Persona;
-import com.example.demo.service.IEstudianteJdbcService;
+import com.example.demo.To.PersonaTo;
+import com.example.demo.repository.modelo.Persona;
 import com.example.demo.service.IPersonaJdbcService;
+import com.example.demo.service.IPersonaJpaService;
 
 @SpringBootApplication
 public class ProyectoU2CmApplication implements CommandLineRunner{
 
 	private static final Logger log=LogManager.getLogger(ProyectoU2CmApplication.class);
 	
-//	@Autowired
-//	private IPersonaJdbcService personaJdbcService;
-	
 	@Autowired
-	private IEstudianteJdbcService estudianteJdbcService;
-	
+	private IPersonaJpaService personaJpaService;
 	
 	public static void main(String[] args) {
 		SpringApplication.run(ProyectoU2CmApplication.class, args);
@@ -31,29 +27,27 @@ public class ProyectoU2CmApplication implements CommandLineRunner{
 	@Override
 	public void run(String... args) throws Exception {
 		
-		Estudiante estu=new Estudiante();
-		estu.setCedula(12454);
-		estu.setNombre("Carlos");
-		estu.setApellido("Montalvo");
-		estu.setCarrera("Ing Civil");
-		estu.setSemestre(3);
+		///////////taller 16
 		
-		this.estudianteJdbcService.insertarService(estu);//insertar
+		Persona persona1=new Persona();
+		persona1.setId(5);
+		persona1.setNombre("Carlos");
+		persona1.setApellido("Montalvo");
 		
-		log.info(this.estudianteJdbcService.buscarService(12454));//comprobar (buscar)
+		this.personaJpaService.insertarService(persona1);//create
 		
-		estu.setSemestre(4);
+		persona1.setNombre("Ricardo");
 		
-		this.estudianteJdbcService.actualizarService(estu);//actualizar
+		this.personaJpaService.actualizarService(persona1);//update
 		
-		log.info(this.estudianteJdbcService.buscarService(12454));//comprobar (buscar)
+		log.info(this.personaJpaService.buscarPersonaIdService(5));//read
 		
-		this.estudianteJdbcService.eliminarService(12454);//eliminar
+		this.personaJpaService.eliminarService(5);//delete
+		
+		//log.info("Lista de personas---> "+this.personaJdbcService.buscarTodosService());
+		
 		
 		///////////taller 15
-		
-//		System.out.println("Hola Mundo");
-//		log.info("Hola Mundo");
 		
 //		Persona p=new Persona();
 //		p.setId(2);
@@ -74,7 +68,7 @@ public class ProyectoU2CmApplication implements CommandLineRunner{
 //		
 //		//Eliminar
 //		this.personaJdbcService.eliminarService(2);
-//		
+		
 //		//Buscar
 //		log.info(this.personaJdbcService.buscarPersonaIdService(4));
 	}

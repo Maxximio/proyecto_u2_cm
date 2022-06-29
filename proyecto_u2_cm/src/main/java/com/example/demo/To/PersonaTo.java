@@ -1,13 +1,13 @@
-package com.example.demo.model;
+package com.example.demo.To;
 
 
-public class Persona {
+public class PersonaTo {
 
 	private int id;
 	private String nombre;
 	private String apellido;
 	
-	public Persona() {
+	public PersonaTo() {
 		
 	}
 	

@@ -1,15 +1,19 @@
 package com.example.demo.repository;
 
-import com.example.demo.model.Persona;
+import java.util.List;
+
+import com.example.demo.To.PersonaTo;
 
 public interface IPersonaJdbcRepository {
 
-	public void insertar(Persona persona);
+	public void insertar(PersonaTo persona);
 	
-	public Persona buscarPersonaId(int id);
+	public PersonaTo buscarPersonaId(Integer id);
 	
-	public void actualizar(Persona persona);
+	public void actualizar(PersonaTo persona);
 	
-	public void eliminar(int id);
+	public void eliminar(Integer id);
+	
+	public List<PersonaTo> buscarTodos();
 	
 }

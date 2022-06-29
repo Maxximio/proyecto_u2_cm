@@ -1,15 +1,19 @@
 package com.example.demo.service;
 
-import com.example.demo.model.Persona;
+import java.util.List;
+
+import com.example.demo.To.PersonaTo;
 
 public interface IPersonaJdbcService {
 
-	public void insertarService(Persona persona);
+	public void insertarService(PersonaTo persona);
 	
-	public Persona buscarPersonaIdService(int id);
+	public PersonaTo buscarPersonaIdService(int id);
 	
-	public void actualizarService(Persona persona);
+	public void actualizarService(PersonaTo persona);
 	
 	public void eliminarService(int id);
+	
+	public List<PersonaTo> buscarTodosService();
 	
 }

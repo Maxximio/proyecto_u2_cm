@@ -13,4 +13,8 @@
 4[2022-06-28 08:55:22] [ INFO ] [ProyectoU2CmApplication:33] El resultado de la busqueda es:
 4[2022-06-28 08:55:22] [ INFO ] [ProyectoU2CmApplication:49] Estudiante [cedula=12454, nombre=Carlos, apellido=Montalvo, carrera=Ing Civil, semestre=4]
 4[2022-06-28 08:55:22] [ INFO ] [ProyectoU2CmApplication:51] **************Se ha eliminado el estudiante a DB**************
+4[2022-06-28 18:33:33] [ INFO ] [ProyectoU2CmApplication:30] Lista de personas---> [Persona [id=4, nombre=Snatiago, apellido=Velez]]
+4[2022-06-28 18:34:48] [ INFO ] [ProyectoU2CmApplication:30] Lista de personas---> [Persona [id=4, nombre=Snatiago, apellido=Velez], Persona [id=2, nombre=Mateo, apellido=Perez]]
+4[2022-06-28 19:47:00] [ INFO ] [ProyectoU2CmApplication:33] Persona [id=4, nombre=Snatiago, apellido=Velez]
+4[2022-06-28 19:56:15] [ INFO ] [ProyectoU2CmApplication:43] Persona [id=5, nombre=Ricardo, apellido=Montalvo]
 4
