@@ -8,7 +8,9 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import com.example.demo.To.PersonaTo;
+import com.example.demo.repository.modelo.Estudiante;
 import com.example.demo.repository.modelo.Persona;
+import com.example.demo.service.IEstudianteJpaService;
 import com.example.demo.service.IPersonaJdbcService;
 import com.example.demo.service.IPersonaJpaService;
 
@@ -20,6 +22,9 @@ public class ProyectoU2CmApplication implements CommandLineRunner{
 	@Autowired
 	private IPersonaJpaService personaJpaService;
 	
+	@Autowired
+	private IEstudianteJpaService estudianteJpaService;
+	
 	public static void main(String[] args) {
 		SpringApplication.run(ProyectoU2CmApplication.class, args);
 	}
@@ -27,22 +32,43 @@ public class ProyectoU2CmApplication implements CommandLineRunner{
 	@Override
 	public void run(String... args) throws Exception {
 		
+		///////////tarea 14
+		
+		Estudiante estu=new Estudiante();
+		estu.setCedula(123546);
+		estu.setNombre("Carlos");
+		estu.setApellido("Montalvo");
+		estu.setCarrera("Arquitectura");
+		estu.setSemestre(2);
+		
+		this.estudianteJpaService.insertarService(estu);
+		
+		estu.setSemestre(3);
+		
+		this.estudianteJpaService.actualizarService(estu);
+		
+		this.estudianteJpaService.buscarEstudianteCedulaService(123546);
+		
+		this.estudianteJpaService.eliminarService(123546);
+		
+		
+		
 		///////////taller 16
 		
-		Persona persona1=new Persona();
-		persona1.setId(5);
-		persona1.setNombre("Carlos");
-		persona1.setApellido("Montalvo");
-		
-		this.personaJpaService.insertarService(persona1);//create
-		
-		persona1.setNombre("Ricardo");
-		
-		this.personaJpaService.actualizarService(persona1);//update
-		
-		log.info(this.personaJpaService.buscarPersonaIdService(5));//read
-		
-		this.personaJpaService.eliminarService(5);//delete
+//		Persona persona1=new Persona();
+//		persona1.setId(5);
+//		persona1.setNombre("Carlos");
+//		persona1.setApellido("Montalvo");
+//		
+//		this.personaJpaService.insertarService(persona1);//create
+//		
+//		persona1.setNombre("Ricardo");
+//		
+//		this.personaJpaService.actualizarService(persona1);//update
+//		
+//		log.info(this.personaJpaService.buscarPersonaIdService(5));//read
+//		
+//		this.personaJpaService.eliminarService(5);//delete
 		
 		//log.info("Lista de personas---> "+this.personaJdbcService.buscarTodosService());
 		
