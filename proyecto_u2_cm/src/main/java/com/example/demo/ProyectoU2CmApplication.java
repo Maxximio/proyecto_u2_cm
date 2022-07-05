@@ -32,32 +32,40 @@ public class ProyectoU2CmApplication implements CommandLineRunner{
 	@Override
 	public void run(String... args) throws Exception {
 		
+		///////////taller 17
+		
+		Persona persona1=new Persona();
+		persona1.setNombre("Mateo");
+		persona1.setApellido("Montalvo");
+		
+		this.personaJpaService.insertarService(persona1);//create
+		
+		
 		///////////tarea 14
 		
-		Estudiante estu=new Estudiante();
-		estu.setCedula(123546);
-		estu.setNombre("Carlos");
-		estu.setApellido("Montalvo");
-		estu.setCarrera("Arquitectura");
-		estu.setSemestre(2);
-		
-		this.estudianteJpaService.insertarService(estu);
-		
-		estu.setSemestre(3);
-		
-		this.estudianteJpaService.actualizarService(estu);
-		
-		this.estudianteJpaService.buscarEstudianteCedulaService(123546);
-		
-		this.estudianteJpaService.eliminarService(123546);
+//		Estudiante estu=new Estudiante();
+//		estu.setCedula(123546);
+//		estu.setNombre("Carlos");
+//		estu.setApellido("Montalvo");
+//		estu.setCarrera("Arquitectura");
+//		estu.setSemestre(2);
+//		
+//		this.estudianteJpaService.insertarService(estu);
+//		
+//		estu.setSemestre(3);
+//		
+//		this.estudianteJpaService.actualizarService(estu);
+//		
+//		log.info("El estudiante es: "+this.estudianteJpaService.buscarEstudianteCedulaService(123546));
+//		
+//		this.estudianteJpaService.eliminarService(123546);
 		
 		
 		
 		///////////taller 16
 		
 //		Persona persona1=new Persona();
-//		persona1.setId(5);
-//		persona1.setNombre("Carlos");
+//		persona1.setNombre("Mateo");
 //		persona1.setApellido("Montalvo");
 //		
 //		this.personaJpaService.insertarService(persona1);//create
