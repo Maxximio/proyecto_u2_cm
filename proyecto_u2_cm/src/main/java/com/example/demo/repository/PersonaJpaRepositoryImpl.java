@@ -1,11 +1,15 @@
 package com.example.demo.repository;
 
+import java.util.List;
+
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
 import javax.transaction.Transactional;
 
 import org.springframework.stereotype.Repository;
 
+import com.example.demo.To.PersonaTo;
 import com.example.demo.repository.modelo.Persona;
 
 @Repository
@@ -35,6 +39,24 @@ public class PersonaJpaRepositoryImpl implements IPersonaJpaRepository{
 	public void eliminar(Integer id) {
 		Persona p=this.buscarPersonaId(id);
 		this.entityManager.remove(p);
+	}
+	
+	@Override
+	public Persona buscarPersonaCedula(String cedula) {
+		Query jpqlQuery=this.entityManager
+				.createQuery("select p from Persona p Where p.cedula = :datoCedula");
+		jpqlQuery.setParameter("datoCedula", cedula);
+		
+		return (Persona) jpqlQuery.getSingleResult();
+	}
+
+	@Override
+	public List<Persona> buscarPersonaApellido(String apellido) {
+		Query jpqlQuery=this.entityManager
+				.createQuery("select p from Persona p Where p.apellido = :datoApellido");
+		jpqlQuery.setParameter("datoApellido", apellido);
+		
+		return jpqlQuery.getResultList();
 	}
 
 }

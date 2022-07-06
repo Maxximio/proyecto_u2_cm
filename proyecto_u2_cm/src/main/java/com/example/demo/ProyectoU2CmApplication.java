@@ -1,6 +1,9 @@
 package com.example.demo;
 
 import org.apache.log4j.Logger;
+
+import java.util.List;
+
 import org.apache.log4j.LogManager;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -35,11 +38,19 @@ public class ProyectoU2CmApplication implements CommandLineRunner{
 		///////////taller 17
 		
 		Persona persona1=new Persona();
-		persona1.setNombre("Mateo");
+		persona1.setNombre("Juan");
 		persona1.setApellido("Montalvo");
+		persona1.setCedula("534");
+		persona1.setGenero("Masculino");
 		
-		this.personaJpaService.insertarService(persona1);//create
+		//this.personaJpaService.insertarService(persona1);//create
 		
+		//log.info(this.personaJpaService.buscarPersonaCedulaService("123"));
+		
+		List<Persona> listaPersonas=this.personaJpaService.buscarPersonaApellido("Montalvo");
+		for(Persona p : listaPersonas) {
+			log.info("lista---"+p);
+		}
 		
 		///////////tarea 14
 		

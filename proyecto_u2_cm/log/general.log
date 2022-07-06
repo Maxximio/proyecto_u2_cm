@@ -19,4 +19,12 @@
 4[2022-06-28 19:56:15] [ INFO ] [ProyectoU2CmApplication:43] Persona [id=5, nombre=Ricardo, apellido=Montalvo]
 4[2022-07-01 16:26:45] [ INFO ] [ProyectoU2CmApplication:50] Estudiante [cedula=123546, nombre=Carlos, apellido=Montalvo, carrera=Arquitectura, semestre=3]
 4[2022-07-01 16:27:16] [ INFO ] [ProyectoU2CmApplication:50] El estudiante es: Estudiante [cedula=123546, nombre=Carlos, apellido=Montalvo, carrera=Arquitectura, semestre=3]
+4[2022-07-05 19:48:44] [ INFO ] [ProyectoU2CmApplication:45] Persona [id=3, nombre=Mateo, genero=Masculino, cedula=123, apellido=Montalvo]
+4[2022-07-05 20:06:59] [ INFO ] [ProyectoU2CmApplication:48] Persona [id=3, nombre=Mateo, genero=Masculino, cedula=123, apellido=Montalvo]
+4[2022-07-05 20:06:59] [ INFO ] [ProyectoU2CmApplication:52] lista---Persona [id=2, nombre=Mateo, genero=null, cedula=null, apellido=Montalvo]
+4[2022-07-05 20:06:59] [ INFO ] [ProyectoU2CmApplication:52] lista---Persona [id=3, nombre=Mateo, genero=Masculino, cedula=123, apellido=Montalvo]
+4[2022-07-05 20:06:59] [ INFO ] [ProyectoU2CmApplication:52] lista---Persona [id=4, nombre=Juan, genero=Masculino, cedula=534, apellido=Montalvo]
+4[2022-07-05 20:07:20] [ INFO ] [ProyectoU2CmApplication:52] lista---Persona [id=2, nombre=Mateo, genero=null, cedula=null, apellido=Montalvo]
+4[2022-07-05 20:07:20] [ INFO ] [ProyectoU2CmApplication:52] lista---Persona [id=3, nombre=Mateo, genero=Masculino, cedula=123, apellido=Montalvo]
+4[2022-07-05 20:07:20] [ INFO ] [ProyectoU2CmApplication:52] lista---Persona [id=4, nombre=Juan, genero=Masculino, cedula=534, apellido=Montalvo]
 4
