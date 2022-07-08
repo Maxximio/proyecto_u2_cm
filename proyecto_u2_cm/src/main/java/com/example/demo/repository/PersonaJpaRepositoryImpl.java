@@ -59,4 +59,22 @@ public class PersonaJpaRepositoryImpl implements IPersonaJpaRepository{
 		return jpqlQuery.getResultList();
 	}
 
+	@Override
+	public List<Persona> buscarPersonaNombre(String nombre) {
+		Query jpqlQuery=this.entityManager
+				.createQuery("select p from Persona p Where p.nombre = :datoNombre");
+		jpqlQuery.setParameter("datoNombre", nombre);
+		
+		return jpqlQuery.getResultList();
+	}
+
+	@Override
+	public List<Persona> buscarPersonaGenero(String genero) {
+		Query jpqlQuery=this.entityManager
+				.createQuery("select p from Persona p Where p.genero = :datoGenero");
+		jpqlQuery.setParameter("datoGenero", genero);
+		
+		return jpqlQuery.getResultList();
+	}
+
 }

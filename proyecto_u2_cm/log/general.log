@@ -27,4 +27,12 @@
 4[2022-07-05 20:07:20] [ INFO ] [ProyectoU2CmApplication:52] lista---Persona [id=2, nombre=Mateo, genero=null, cedula=null, apellido=Montalvo]
 4[2022-07-05 20:07:20] [ INFO ] [ProyectoU2CmApplication:52] lista---Persona [id=3, nombre=Mateo, genero=Masculino, cedula=123, apellido=Montalvo]
 4[2022-07-05 20:07:20] [ INFO ] [ProyectoU2CmApplication:52] lista---Persona [id=4, nombre=Juan, genero=Masculino, cedula=534, apellido=Montalvo]
+4[2022-07-08 18:30:40] [ INFO ] [ProyectoU2CmApplication:52] lista---Persona [id=2, nombre=Mateo, genero=null, cedula=null, apellido=Montalvo]
+4[2022-07-08 18:30:40] [ INFO ] [ProyectoU2CmApplication:52] lista---Persona [id=3, nombre=Mateo, genero=Masculino, cedula=123, apellido=Montalvo]
+4[2022-07-08 18:30:40] [ INFO ] [ProyectoU2CmApplication:52] lista---Persona [id=4, nombre=Juan, genero=Masculino, cedula=534, apellido=Montalvo]
+4[2022-07-08 18:41:28] [ INFO ] [ProyectoU2CmApplication:35] lista1---Persona [id=2, nombre=Mateo, genero=null, cedula=null, apellido=Montalvo]
+4[2022-07-08 18:41:28] [ INFO ] [ProyectoU2CmApplication:35] lista1---Persona [id=3, nombre=Mateo, genero=Masculino, cedula=123, apellido=Montalvo]
+4[2022-07-08 18:41:28] [ INFO ] [ProyectoU2CmApplication:38] segunda lista
+4[2022-07-08 18:41:28] [ INFO ] [ProyectoU2CmApplication:42] lista2---Persona [id=3, nombre=Mateo, genero=Masculino, cedula=123, apellido=Montalvo]
+4[2022-07-08 18:41:28] [ INFO ] [ProyectoU2CmApplication:42] lista2---Persona [id=4, nombre=Juan, genero=Masculino, cedula=534, apellido=Montalvo]
 4

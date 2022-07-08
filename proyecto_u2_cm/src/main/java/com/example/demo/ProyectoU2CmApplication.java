@@ -10,11 +10,7 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import com.example.demo.To.PersonaTo;
-import com.example.demo.repository.modelo.Estudiante;
 import com.example.demo.repository.modelo.Persona;
-import com.example.demo.service.IEstudianteJpaService;
-import com.example.demo.service.IPersonaJdbcService;
 import com.example.demo.service.IPersonaJpaService;
 
 @SpringBootApplication
@@ -25,9 +21,6 @@ public class ProyectoU2CmApplication implements CommandLineRunner{
 	@Autowired
 	private IPersonaJpaService personaJpaService;
 	
-	@Autowired
-	private IEstudianteJpaService estudianteJpaService;
-	
 	public static void main(String[] args) {
 		SpringApplication.run(ProyectoU2CmApplication.class, args);
 	}
@@ -35,22 +28,36 @@ public class ProyectoU2CmApplication implements CommandLineRunner{
 	@Override
 	public void run(String... args) throws Exception {
 		
+		///////////tarea 15
+		
+		List<Persona> listaPersonasNombre=this.personaJpaService.buscarPersonaNombreService("Mateo");
+		for(Persona p : listaPersonasNombre) {
+			log.info("lista1---"+p);
+		}
+		
+		log.info("segunda lista");
+		
+		List<Persona> listaPersonasGenero=this.personaJpaService.buscarPersonaGeneroService("Masculino");
+		for(Persona p : listaPersonasGenero) {
+			log.info("lista2---"+p);
+		}
+		
 		///////////taller 17
 		
-		Persona persona1=new Persona();
-		persona1.setNombre("Juan");
-		persona1.setApellido("Montalvo");
-		persona1.setCedula("534");
-		persona1.setGenero("Masculino");
-		
-		//this.personaJpaService.insertarService(persona1);//create
-		
-		//log.info(this.personaJpaService.buscarPersonaCedulaService("123"));
-		
-		List<Persona> listaPersonas=this.personaJpaService.buscarPersonaApellido("Montalvo");
-		for(Persona p : listaPersonas) {
-			log.info("lista---"+p);
-		}
+//		Persona persona1=new Persona();
+//		persona1.setNombre("Juan");
+//		persona1.setApellido("Montalvo");
+//		persona1.setCedula("534");
+//		persona1.setGenero("Masculino");
+//		
+//		//this.personaJpaService.insertarService(persona1);//create
+//		
+//		//log.info(this.personaJpaService.buscarPersonaCedulaService("123"));
+//		
+//		List<Persona> listaPersonas=this.personaJpaService.buscarPersonaApellido("Montalvo");
+//		for(Persona p : listaPersonas) {
+//			log.info("lista---"+p);
+//		}
 		
 		///////////tarea 14
 		
