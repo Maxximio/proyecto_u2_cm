@@ -28,19 +28,37 @@ public class ProyectoU2CmApplication implements CommandLineRunner{
 	@Override
 	public void run(String... args) throws Exception {
 		
+		///////////taller 19
+		
+		Persona p1=new Persona();
+		p1.setApellido("Perez");
+		p1.setNombre("Ana");
+		p1.setCedula("3534");
+		p1.setGenero("Femenino");
+		
+		//this.personaJpaService.insertarService(p1);
+		
+		int resultado = this.personaJpaService.actualizarPorApellidoService("Aguilar", "Masculino");
+		
+		log.info("Cantidad Registros actualizados: "+resultado);
+		
+		int resulta2 =this.personaJpaService.eliminarPorGeneroService("Femenino");
+		
+		log.info("Cantidad Registros actualizados: "+resulta2);
+		
 		///////////tarea 15
 		
-		List<Persona> listaPersonasNombre=this.personaJpaService.buscarPersonaNombreService("Mateo");
-		for(Persona p : listaPersonasNombre) {
-			log.info("lista1---"+p);
-		}
-		
-		log.info("segunda lista");
-		
-		List<Persona> listaPersonasGenero=this.personaJpaService.buscarPersonaGeneroService("Masculino");
-		for(Persona p : listaPersonasGenero) {
-			log.info("lista2---"+p);
-		}
+//		List<Persona> listaPersonasNombre=this.personaJpaService.buscarPersonaNombreService("Mateo");
+//		for(Persona p : listaPersonasNombre) {
+//			log.info("lista1---"+p);
+//		}
+//		
+//		log.info("segunda lista");
+//		
+//		List<Persona> listaPersonasGenero=this.personaJpaService.buscarPersonaGeneroService("Masculino");
+//		for(Persona p : listaPersonasGenero) {
+//			log.info("lista2---"+p);
+//		}
 		
 		///////////taller 17
 		

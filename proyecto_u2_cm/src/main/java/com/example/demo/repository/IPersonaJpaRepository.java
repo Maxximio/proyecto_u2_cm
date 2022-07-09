@@ -26,4 +26,10 @@ public interface IPersonaJpaRepository {
 	
 	public List<Persona> buscarPersonaGenero(String genero);
 	
+	
+	
+	public int eliminarPorGenero(String genero);
+
+	public int actualizarPorApellido(String apellido, String genero);
+	
 }
