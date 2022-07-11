@@ -2,7 +2,6 @@ package com.example.demo.repository;
 
 import java.util.List;
 
-import com.example.demo.To.PersonaTo;
 import com.example.demo.repository.modelo.Persona;
 
 

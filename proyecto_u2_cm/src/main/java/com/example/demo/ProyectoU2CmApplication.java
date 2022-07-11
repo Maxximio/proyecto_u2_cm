@@ -2,6 +2,8 @@ package com.example.demo;
 
 import org.apache.log4j.Logger;
 
+import java.math.BigDecimal;
+import java.time.LocalDateTime;
 import java.util.List;
 
 import org.apache.log4j.LogManager;
@@ -10,16 +12,29 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import com.example.demo.repository.modelo.Persona;
-import com.example.demo.service.IPersonaJpaService;
+import com.example.demo.repository.modelo.Propietario;
+import com.example.demo.repository.modelo.Vehiculo;
+import com.example.demo.service.IMatriculaGestorService;
+import com.example.demo.service.IPropietarioService;
+import com.example.demo.service.IVehiculoService;
+
 
 @SpringBootApplication
 public class ProyectoU2CmApplication implements CommandLineRunner{
 
 	private static final Logger log=LogManager.getLogger(ProyectoU2CmApplication.class);
 	
+//	@Autowired
+//	private IPersonaJpaService personaJpaService;
+	
 	@Autowired
-	private IPersonaJpaService personaJpaService;
+	private IVehiculoService vehiculoService;
+	
+	@Autowired
+	private IPropietarioService propietarioService;
+	
+	@Autowired
+	private IMatriculaGestorService gestorService;
 	
 	public static void main(String[] args) {
 		SpringApplication.run(ProyectoU2CmApplication.class, args);
@@ -28,23 +43,56 @@ public class ProyectoU2CmApplication implements CommandLineRunner{
 	@Override
 	public void run(String... args) throws Exception {
 		
+	///////////tarea 16
+		
+	/////creando vehiculo
+	System.out.println("###############################################################");
+	Vehiculo vehiculo=new Vehiculo();
+	vehiculo.setMarca("Chevrolet");
+	vehiculo.setPlaca("1233521");
+	vehiculo.setPrecio(new BigDecimal(20000));
+	vehiculo.setTipo("P");
+
+	this.vehiculoService.insertarService(vehiculo);
+			
+	//actualiza vehiculo
+	System.out.println("###############################################################");
+	vehiculo.setMarca("Mazda");
+	vehiculo.setTipo("L");
+			
+	this.vehiculoService.actualizarService(vehiculo);
+			
+	//crea propietario
+	System.out.println("###############################################################");
+	Propietario pro=new Propietario();
+	pro.setNombre("Carlos");
+	pro.setApellido("Montalvo");
+	pro.setCedula("456345345");
+	pro.setFechaNacimiento(LocalDateTime.of(2000, 04, 01, 5, 30));
+			
+	this.propietarioService.insertarService(pro);
+			
+	//realiza matricula
+	System.out.println("###############################################################");
+	this.gestorService.generar("456345345", "1233521");
+		
 		///////////taller 19
 		
-		Persona p1=new Persona();
-		p1.setApellido("Perez");
-		p1.setNombre("Ana");
-		p1.setCedula("3534");
-		p1.setGenero("Femenino");
-		
-		//this.personaJpaService.insertarService(p1);
-		
-		int resultado = this.personaJpaService.actualizarPorApellidoService("Aguilar", "Masculino");
-		
-		log.info("Cantidad Registros actualizados: "+resultado);
-		
-		int resulta2 =this.personaJpaService.eliminarPorGeneroService("Femenino");
-		
-		log.info("Cantidad Registros actualizados: "+resulta2);
+//		Persona p1=new Persona();
+//		p1.setApellido("Perez");
+//		p1.setNombre("Ana");
+//		p1.setCedula("3534");
+//		p1.setGenero("Femenino");
+//		
+//		//this.personaJpaService.insertarService(p1);
+//		
+//		int resultado = this.personaJpaService.actualizarPorApellidoService("Aguilar", "Masculino");
+//		
+//		log.info("Cantidad Registros actualizados: "+resultado);
+//		
+//		int resulta2 =this.personaJpaService.eliminarPorGeneroService("Femenino");
+//		
+//		log.info("Cantidad Registros actualizados: "+resulta2);
 		
 		///////////tarea 15
 		
