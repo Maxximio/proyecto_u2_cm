@@ -63,4 +63,193 @@
 4[2022-07-11 19:55:20] [ INFO ] [ProyectoU2CmApplication:42] Persona [id=4, nombre=Juan, genero=Masculino, cedula=534, apellido=Montalvo] forma Named Typed Query
 4[2022-07-11 19:55:20] [ INFO ] [ProyectoU2CmApplication:46] listaNombreApellido---Persona [id=2, nombre=Mateo, genero=null, cedula=null, apellido=Montalvo]
 4[2022-07-11 19:55:20] [ INFO ] [ProyectoU2CmApplication:46] listaNombreApellido---Persona [id=3, nombre=Mateo, genero=Masculino, cedula=123, apellido=Montalvo]
+4[2022-07-12 10:50:16] [ INFO ] [ProyectoU2CmApplication:43] lista1---Estudiante [cedula=234235, nombre=Ramiro, apellido=Pazmiño, carrera=Arquitectura, semestre=8]
+4[2022-07-12 10:50:16] [ INFO ] [ProyectoU2CmApplication:43] lista1---Estudiante [cedula=457893, nombre=Guadalupe, apellido=Perez, carrera=Arquitectura, semestre=8]
+4[2022-07-12 10:50:16] [ INFO ] [ProyectoU2CmApplication:43] lista1---Estudiante [cedula=454878, nombre=Jesus, apellido=Valverde, carrera=Arquitectura, semestre=8]
+4[2022-07-12 10:51:28] [ INFO ] [ProyectoU2CmApplication:43] lista1---Estudiante [cedula=234235, nombre=Ramiro, apellido=Pazmiño, carrera=Arquitectura, semestre=8]
+4[2022-07-12 10:51:28] [ INFO ] [ProyectoU2CmApplication:43] lista1---Estudiante [cedula=457893, nombre=Guadalupe, apellido=Perez, carrera=Arquitectura, semestre=8]
+4[2022-07-12 10:51:28] [ INFO ] [ProyectoU2CmApplication:43] lista1---Estudiante [cedula=454878, nombre=Jesus, apellido=Valverde, carrera=Arquitectura, semestre=8]
+4[2022-07-12 10:51:28] [ INFO ] [ProyectoU2CmApplication:45] ------------------------------------------------------------------------------
+4[2022-07-12 10:51:28] [ INFO ] [ProyectoU2CmApplication:48] lista2---Estudiante [cedula=543252, nombre=Miguel, apellido=Santos, carrera=Medicina, semestre=6]
+4[2022-07-12 10:51:28] [ INFO ] [ProyectoU2CmApplication:48] lista2---Estudiante [cedula=345346, nombre=Samanta, apellido=Alba, carrera=Medicina, semestre=4]
+4[2022-07-12 10:51:28] [ INFO ] [ProyectoU2CmApplication:48] lista2---Estudiante [cedula=346346, nombre=Eduardo, apellido=Estupiñan, carrera=Medicina, semestre=2]
+4[2022-07-12 10:56:13] [ INFO ] [ProyectoU2CmApplication:43] busqueda 1---Estudiante [cedula=234235, nombre=Ramiro, apellido=Pazmiño, carrera=Arquitectura, semestre=8]
+4[2022-07-12 10:56:13] [ INFO ] [ProyectoU2CmApplication:43] busqueda 1---Estudiante [cedula=457893, nombre=Guadalupe, apellido=Perez, carrera=Arquitectura, semestre=8]
+4[2022-07-12 10:56:13] [ INFO ] [ProyectoU2CmApplication:43] busqueda 1---Estudiante [cedula=454878, nombre=Jesus, apellido=Valverde, carrera=Arquitectura, semestre=8]
+4[2022-07-12 10:56:13] [ INFO ] [ProyectoU2CmApplication:45] ------------------------------------------------------------------------------
+4[2022-07-12 10:56:13] [ INFO ] [ProyectoU2CmApplication:48] busqueda 2---Estudiante [cedula=543252, nombre=Miguel, apellido=Santos, carrera=Medicina, semestre=6]
+4[2022-07-12 10:56:13] [ INFO ] [ProyectoU2CmApplication:48] busqueda 2---Estudiante [cedula=345346, nombre=Samanta, apellido=Alba, carrera=Medicina, semestre=4]
+4[2022-07-12 10:56:13] [ INFO ] [ProyectoU2CmApplication:48] busqueda 2---Estudiante [cedula=346346, nombre=Eduardo, apellido=Estupiñan, carrera=Medicina, semestre=2]
+4[2022-07-12 10:56:13] [ INFO ] [ProyectoU2CmApplication:50] ------------------------------------------------------------------------------
+4[2022-07-12 10:56:13] [ INFO ] [ProyectoU2CmApplication:51] busqueda 3---Estudiante [cedula=123454, nombre=Carlos, apellido=Montalvo, carrera=Ing en Computacion, semestre=6]
+4[2022-07-12 10:56:13] [ INFO ] [ProyectoU2CmApplication:53] ------------------------------------------------------------------------------
+4[2022-07-12 10:56:13] [ INFO ] [ProyectoU2CmApplication:56] busqueda 4---Estudiante [cedula=457893, nombre=Guadalupe, apellido=Perez, carrera=Arquitectura, semestre=8]
+4[2022-07-12 10:56:13] [ INFO ] [ProyectoU2CmApplication:58] ------------------------------------------------------------------------------
+4[2022-07-12 10:56:35] [ INFO ] [ProyectoU2CmApplication:43] busqueda 1---Estudiante [cedula=234235, nombre=Ramiro, apellido=Pazmiño, carrera=Arquitectura, semestre=8]
+4[2022-07-12 10:56:35] [ INFO ] [ProyectoU2CmApplication:43] busqueda 1---Estudiante [cedula=457893, nombre=Guadalupe, apellido=Perez, carrera=Arquitectura, semestre=8]
+4[2022-07-12 10:56:35] [ INFO ] [ProyectoU2CmApplication:43] busqueda 1---Estudiante [cedula=454878, nombre=Jesus, apellido=Valverde, carrera=Arquitectura, semestre=8]
+4[2022-07-12 10:56:35] [ INFO ] [ProyectoU2CmApplication:45] ------------------------------------------------------------------------------
+4[2022-07-12 10:56:35] [ INFO ] [ProyectoU2CmApplication:48] busqueda 2---Estudiante [cedula=543252, nombre=Miguel, apellido=Santos, carrera=Medicina, semestre=6]
+4[2022-07-12 10:56:35] [ INFO ] [ProyectoU2CmApplication:48] busqueda 2---Estudiante [cedula=345346, nombre=Samanta, apellido=Alba, carrera=Medicina, semestre=4]
+4[2022-07-12 10:56:35] [ INFO ] [ProyectoU2CmApplication:48] busqueda 2---Estudiante [cedula=346346, nombre=Eduardo, apellido=Estupiñan, carrera=Medicina, semestre=2]
+4[2022-07-12 10:56:35] [ INFO ] [ProyectoU2CmApplication:50] ------------------------------------------------------------------------------
+4[2022-07-12 10:56:35] [ INFO ] [ProyectoU2CmApplication:51] busqueda 3---Estudiante [cedula=123454, nombre=Carlos, apellido=Montalvo, carrera=Ing en Computacion, semestre=6]
+4[2022-07-12 10:56:35] [ INFO ] [ProyectoU2CmApplication:53] ------------------------------------------------------------------------------
+4[2022-07-12 10:56:35] [ INFO ] [ProyectoU2CmApplication:56] busqueda 4---Estudiante [cedula=457893, nombre=Guadalupe, apellido=Perez, carrera=Arquitectura, semestre=8]
+4[2022-07-12 10:56:35] [ INFO ] [ProyectoU2CmApplication:58] ------------------------------------------------------------------------------
+4[2022-07-12 10:57:42] [ INFO ] [ProyectoU2CmApplication:43] busqueda 1---Estudiante [cedula=234235, nombre=Ramiro, apellido=Pazmiño, carrera=Arquitectura, semestre=8]
+4[2022-07-12 10:57:42] [ INFO ] [ProyectoU2CmApplication:43] busqueda 1---Estudiante [cedula=457893, nombre=Guadalupe, apellido=Perez, carrera=Arquitectura, semestre=8]
+4[2022-07-12 10:57:42] [ INFO ] [ProyectoU2CmApplication:43] busqueda 1---Estudiante [cedula=454878, nombre=Jesus, apellido=Valverde, carrera=Arquitectura, semestre=8]
+4[2022-07-12 10:57:42] [ INFO ] [ProyectoU2CmApplication:45] ------------------------------------------------------------------------------
+4[2022-07-12 10:57:42] [ INFO ] [ProyectoU2CmApplication:48] busqueda 2---Estudiante [cedula=543252, nombre=Miguel, apellido=Santos, carrera=Medicina, semestre=6]
+4[2022-07-12 10:57:42] [ INFO ] [ProyectoU2CmApplication:48] busqueda 2---Estudiante [cedula=345346, nombre=Samanta, apellido=Alba, carrera=Medicina, semestre=4]
+4[2022-07-12 10:57:42] [ INFO ] [ProyectoU2CmApplication:48] busqueda 2---Estudiante [cedula=346346, nombre=Eduardo, apellido=Estupiñan, carrera=Medicina, semestre=2]
+4[2022-07-12 10:57:42] [ INFO ] [ProyectoU2CmApplication:50] ------------------------------------------------------------------------------
+4[2022-07-12 10:57:42] [ INFO ] [ProyectoU2CmApplication:51] busqueda 3---Estudiante [cedula=123454, nombre=Carlos, apellido=Montalvo, carrera=Ing en Computacion, semestre=6]
+4[2022-07-12 10:57:42] [ INFO ] [ProyectoU2CmApplication:53] ------------------------------------------------------------------------------
+4[2022-07-12 10:57:42] [ INFO ] [ProyectoU2CmApplication:56] busqueda 4---Estudiante [cedula=457893, nombre=Guadalupe, apellido=Perez, carrera=Arquitectura, semestre=8]
+4[2022-07-12 10:57:42] [ INFO ] [ProyectoU2CmApplication:58] ------------------------------------------------------------------------------
+4[2022-07-12 10:58:30] [ INFO ] [ProyectoU2CmApplication:43] busqueda 1---Estudiante [cedula=234235, nombre=Ramiro, apellido=Pazmiño, carrera=Arquitectura, semestre=8]
+4[2022-07-12 10:58:30] [ INFO ] [ProyectoU2CmApplication:43] busqueda 1---Estudiante [cedula=457893, nombre=Guadalupe, apellido=Perez, carrera=Arquitectura, semestre=8]
+4[2022-07-12 10:58:30] [ INFO ] [ProyectoU2CmApplication:43] busqueda 1---Estudiante [cedula=454878, nombre=Jesus, apellido=Valverde, carrera=Arquitectura, semestre=8]
+4[2022-07-12 10:58:30] [ INFO ] [ProyectoU2CmApplication:45] ------------------------------------------------------------------------------
+4[2022-07-12 10:58:30] [ INFO ] [ProyectoU2CmApplication:48] busqueda 2---Estudiante [cedula=543252, nombre=Miguel, apellido=Santos, carrera=Medicina, semestre=6]
+4[2022-07-12 10:58:30] [ INFO ] [ProyectoU2CmApplication:48] busqueda 2---Estudiante [cedula=345346, nombre=Samanta, apellido=Alba, carrera=Medicina, semestre=4]
+4[2022-07-12 10:58:30] [ INFO ] [ProyectoU2CmApplication:48] busqueda 2---Estudiante [cedula=346346, nombre=Eduardo, apellido=Estupiñan, carrera=Medicina, semestre=2]
+4[2022-07-12 10:58:30] [ INFO ] [ProyectoU2CmApplication:50] ------------------------------------------------------------------------------
+4[2022-07-12 10:58:30] [ INFO ] [ProyectoU2CmApplication:51] busqueda 3---Estudiante [cedula=123454, nombre=Carlos, apellido=Montalvo, carrera=Ing en Computacion, semestre=6]
+4[2022-07-12 10:58:30] [ INFO ] [ProyectoU2CmApplication:53] ------------------------------------------------------------------------------
+4[2022-07-12 10:58:30] [ INFO ] [ProyectoU2CmApplication:56] busqueda 4---Estudiante [cedula=457893, nombre=Guadalupe, apellido=Perez, carrera=Arquitectura, semestre=8]
+4[2022-07-12 10:58:30] [ INFO ] [ProyectoU2CmApplication:58] ------------------------------------------------------------------------------
+4[2022-07-12 10:58:45] [ INFO ] [ProyectoU2CmApplication:43] busqueda 1---Estudiante [cedula=234235, nombre=Ramiro, apellido=Pazmiño, carrera=Arquitectura, semestre=8]
+4[2022-07-12 10:58:45] [ INFO ] [ProyectoU2CmApplication:43] busqueda 1---Estudiante [cedula=457893, nombre=Guadalupe, apellido=Perez, carrera=Arquitectura, semestre=8]
+4[2022-07-12 10:58:45] [ INFO ] [ProyectoU2CmApplication:43] busqueda 1---Estudiante [cedula=454878, nombre=Jesus, apellido=Valverde, carrera=Arquitectura, semestre=8]
+4[2022-07-12 10:58:45] [ INFO ] [ProyectoU2CmApplication:45] ------------------------------------------------------------------------------
+4[2022-07-12 10:58:45] [ INFO ] [ProyectoU2CmApplication:48] busqueda 2---Estudiante [cedula=543252, nombre=Miguel, apellido=Santos, carrera=Medicina, semestre=6]
+4[2022-07-12 10:58:45] [ INFO ] [ProyectoU2CmApplication:48] busqueda 2---Estudiante [cedula=345346, nombre=Samanta, apellido=Alba, carrera=Medicina, semestre=4]
+4[2022-07-12 10:58:45] [ INFO ] [ProyectoU2CmApplication:48] busqueda 2---Estudiante [cedula=346346, nombre=Eduardo, apellido=Estupiñan, carrera=Medicina, semestre=2]
+4[2022-07-12 10:58:45] [ INFO ] [ProyectoU2CmApplication:50] ------------------------------------------------------------------------------
+4[2022-07-12 10:58:45] [ INFO ] [ProyectoU2CmApplication:51] busqueda 3---Estudiante [cedula=123454, nombre=Carlos, apellido=Montalvo, carrera=Ing en Computacion, semestre=6]
+4[2022-07-12 10:58:45] [ INFO ] [ProyectoU2CmApplication:53] ------------------------------------------------------------------------------
+4[2022-07-12 10:58:45] [ INFO ] [ProyectoU2CmApplication:56] busqueda 4---Estudiante [cedula=457893, nombre=Guadalupe, apellido=Perez, carrera=Arquitectura, semestre=8]
+4[2022-07-12 10:58:45] [ INFO ] [ProyectoU2CmApplication:58] ------------------------------------------------------------------------------
+4[2022-07-12 10:58:58] [ INFO ] [ProyectoU2CmApplication:43] busqueda 1---Estudiante [cedula=234235, nombre=Ramiro, apellido=Pazmiño, carrera=Arquitectura, semestre=8]
+4[2022-07-12 10:58:58] [ INFO ] [ProyectoU2CmApplication:43] busqueda 1---Estudiante [cedula=457893, nombre=Guadalupe, apellido=Perez, carrera=Arquitectura, semestre=8]
+4[2022-07-12 10:58:58] [ INFO ] [ProyectoU2CmApplication:43] busqueda 1---Estudiante [cedula=454878, nombre=Jesus, apellido=Valverde, carrera=Arquitectura, semestre=8]
+4[2022-07-12 10:58:58] [ INFO ] [ProyectoU2CmApplication:45] ------------------------------------------------------------------------------
+4[2022-07-12 10:58:58] [ INFO ] [ProyectoU2CmApplication:48] busqueda 2---Estudiante [cedula=543252, nombre=Miguel, apellido=Santos, carrera=Medicina, semestre=6]
+4[2022-07-12 10:58:58] [ INFO ] [ProyectoU2CmApplication:48] busqueda 2---Estudiante [cedula=345346, nombre=Samanta, apellido=Alba, carrera=Medicina, semestre=4]
+4[2022-07-12 10:58:58] [ INFO ] [ProyectoU2CmApplication:48] busqueda 2---Estudiante [cedula=346346, nombre=Eduardo, apellido=Estupiñan, carrera=Medicina, semestre=2]
+4[2022-07-12 10:58:58] [ INFO ] [ProyectoU2CmApplication:50] ------------------------------------------------------------------------------
+4[2022-07-12 10:58:58] [ INFO ] [ProyectoU2CmApplication:51] busqueda 3---Estudiante [cedula=123454, nombre=Carlos, apellido=Montalvo, carrera=Ing en Computacion, semestre=6]
+4[2022-07-12 10:58:58] [ INFO ] [ProyectoU2CmApplication:53] ------------------------------------------------------------------------------
+4[2022-07-12 10:58:58] [ INFO ] [ProyectoU2CmApplication:56] busqueda 4---Estudiante [cedula=457893, nombre=Guadalupe, apellido=Perez, carrera=Arquitectura, semestre=8]
+4[2022-07-12 10:58:58] [ INFO ] [ProyectoU2CmApplication:58] ------------------------------------------------------------------------------
+4[2022-07-12 10:59:28] [ INFO ] [ProyectoU2CmApplication:43] busqueda 1---Estudiante [cedula=234235, nombre=Ramiro, apellido=Pazmiño, carrera=Arquitectura, semestre=8]
+4[2022-07-12 10:59:28] [ INFO ] [ProyectoU2CmApplication:43] busqueda 1---Estudiante [cedula=457893, nombre=Guadalupe, apellido=Perez, carrera=Arquitectura, semestre=8]
+4[2022-07-12 10:59:28] [ INFO ] [ProyectoU2CmApplication:43] busqueda 1---Estudiante [cedula=454878, nombre=Jesus, apellido=Valverde, carrera=Arquitectura, semestre=8]
+4[2022-07-12 10:59:28] [ INFO ] [ProyectoU2CmApplication:45] ------------------------------------------------------------------------------
+4[2022-07-12 10:59:28] [ INFO ] [ProyectoU2CmApplication:48] busqueda 2---Estudiante [cedula=543252, nombre=Miguel, apellido=Santos, carrera=Medicina, semestre=6]
+4[2022-07-12 10:59:28] [ INFO ] [ProyectoU2CmApplication:48] busqueda 2---Estudiante [cedula=345346, nombre=Samanta, apellido=Alba, carrera=Medicina, semestre=4]
+4[2022-07-12 10:59:28] [ INFO ] [ProyectoU2CmApplication:48] busqueda 2---Estudiante [cedula=346346, nombre=Eduardo, apellido=Estupiñan, carrera=Medicina, semestre=2]
+4[2022-07-12 10:59:28] [ INFO ] [ProyectoU2CmApplication:50] ------------------------------------------------------------------------------
+4[2022-07-12 10:59:28] [ INFO ] [ProyectoU2CmApplication:51] busqueda 3---Estudiante [cedula=123454, nombre=Carlos, apellido=Montalvo, carrera=Ing en Computacion, semestre=6]
+4[2022-07-12 10:59:28] [ INFO ] [ProyectoU2CmApplication:53] ------------------------------------------------------------------------------
+4[2022-07-12 10:59:28] [ INFO ] [ProyectoU2CmApplication:56] busqueda 4---Estudiante [cedula=457893, nombre=Guadalupe, apellido=Perez, carrera=Arquitectura, semestre=8]
+4[2022-07-12 10:59:28] [ INFO ] [ProyectoU2CmApplication:58] ------------------------------------------------------------------------------
+4[2022-07-12 11:00:09] [ INFO ] [ProyectoU2CmApplication:43] busqueda 1---Estudiante [cedula=234235, nombre=Ramiro, apellido=Pazmiño, carrera=Arquitectura, semestre=8]
+4[2022-07-12 11:00:09] [ INFO ] [ProyectoU2CmApplication:43] busqueda 1---Estudiante [cedula=457893, nombre=Guadalupe, apellido=Perez, carrera=Arquitectura, semestre=8]
+4[2022-07-12 11:00:09] [ INFO ] [ProyectoU2CmApplication:43] busqueda 1---Estudiante [cedula=454878, nombre=Jesus, apellido=Valverde, carrera=Arquitectura, semestre=8]
+4[2022-07-12 11:00:09] [ INFO ] [ProyectoU2CmApplication:45] ------------------------------------------------------------------------------
+4[2022-07-12 11:00:09] [ INFO ] [ProyectoU2CmApplication:48] busqueda 2---Estudiante [cedula=543252, nombre=Miguel, apellido=Santos, carrera=Medicina, semestre=6]
+4[2022-07-12 11:00:09] [ INFO ] [ProyectoU2CmApplication:48] busqueda 2---Estudiante [cedula=345346, nombre=Samanta, apellido=Alba, carrera=Medicina, semestre=4]
+4[2022-07-12 11:00:09] [ INFO ] [ProyectoU2CmApplication:48] busqueda 2---Estudiante [cedula=346346, nombre=Eduardo, apellido=Estupiñan, carrera=Medicina, semestre=2]
+4[2022-07-12 11:00:09] [ INFO ] [ProyectoU2CmApplication:50] ------------------------------------------------------------------------------
+4[2022-07-12 11:00:09] [ INFO ] [ProyectoU2CmApplication:51] busqueda 3---Estudiante [cedula=123454, nombre=Carlos, apellido=Montalvo, carrera=Ing en Computacion, semestre=6]
+4[2022-07-12 11:00:09] [ INFO ] [ProyectoU2CmApplication:53] ------------------------------------------------------------------------------
+4[2022-07-12 11:00:09] [ INFO ] [ProyectoU2CmApplication:56] busqueda 4---Estudiante [cedula=457893, nombre=Guadalupe, apellido=Perez, carrera=Arquitectura, semestre=8]
+4[2022-07-12 11:00:09] [ INFO ] [ProyectoU2CmApplication:58] ------------------------------------------------------------------------------
+4[2022-07-12 11:01:34] [ INFO ] [ProyectoU2CmApplication:43] busqueda 1---Estudiante [cedula=234235, nombre=Ramiro, apellido=Pazmiño, carrera=Arquitectura, semestre=8]
+4[2022-07-12 11:01:34] [ INFO ] [ProyectoU2CmApplication:43] busqueda 1---Estudiante [cedula=457893, nombre=Guadalupe, apellido=Perez, carrera=Arquitectura, semestre=8]
+4[2022-07-12 11:01:34] [ INFO ] [ProyectoU2CmApplication:43] busqueda 1---Estudiante [cedula=454878, nombre=Jesus, apellido=Valverde, carrera=Arquitectura, semestre=8]
+4[2022-07-12 11:01:34] [ INFO ] [ProyectoU2CmApplication:45] ------------------------------------------------------------------------------
+4[2022-07-12 11:01:34] [ INFO ] [ProyectoU2CmApplication:48] busqueda 2---Estudiante [cedula=543252, nombre=Miguel, apellido=Santos, carrera=Medicina, semestre=6]
+4[2022-07-12 11:01:34] [ INFO ] [ProyectoU2CmApplication:48] busqueda 2---Estudiante [cedula=345346, nombre=Samanta, apellido=Alba, carrera=Medicina, semestre=4]
+4[2022-07-12 11:01:34] [ INFO ] [ProyectoU2CmApplication:48] busqueda 2---Estudiante [cedula=346346, nombre=Eduardo, apellido=Estupiñan, carrera=Medicina, semestre=2]
+4[2022-07-12 11:01:34] [ INFO ] [ProyectoU2CmApplication:50] ------------------------------------------------------------------------------
+4[2022-07-12 11:01:34] [ INFO ] [ProyectoU2CmApplication:51] busqueda 3---Estudiante [cedula=123454, nombre=Carlos, apellido=Montalvo, carrera=Ing en Computacion, semestre=6]
+4[2022-07-12 11:01:34] [ INFO ] [ProyectoU2CmApplication:53] ------------------------------------------------------------------------------
+4[2022-07-12 11:01:34] [ INFO ] [ProyectoU2CmApplication:56] busqueda 4---Estudiante [cedula=457893, nombre=Guadalupe, apellido=Perez, carrera=Arquitectura, semestre=8]
+4[2022-07-12 11:01:34] [ INFO ] [ProyectoU2CmApplication:58] ------------------------------------------------------------------------------
+4[2022-07-12 11:04:03] [ INFO ] [ProyectoU2CmApplication:43] busqueda 1---Estudiante [cedula=234235, nombre=Ramiro, apellido=Pazmiño, carrera=Arquitectura, semestre=8]
+4[2022-07-12 11:04:03] [ INFO ] [ProyectoU2CmApplication:43] busqueda 1---Estudiante [cedula=457893, nombre=Guadalupe, apellido=Perez, carrera=Arquitectura, semestre=8]
+4[2022-07-12 11:04:03] [ INFO ] [ProyectoU2CmApplication:43] busqueda 1---Estudiante [cedula=454878, nombre=Jesus, apellido=Valverde, carrera=Arquitectura, semestre=8]
+4[2022-07-12 11:04:03] [ INFO ] [ProyectoU2CmApplication:45] ------------------------------------------------------------------------------
+4[2022-07-12 11:04:03] [ INFO ] [ProyectoU2CmApplication:48] busqueda 2---Estudiante [cedula=543252, nombre=Miguel, apellido=Santos, carrera=Medicina, semestre=6]
+4[2022-07-12 11:04:03] [ INFO ] [ProyectoU2CmApplication:48] busqueda 2---Estudiante [cedula=345346, nombre=Samanta, apellido=Alba, carrera=Medicina, semestre=4]
+4[2022-07-12 11:04:03] [ INFO ] [ProyectoU2CmApplication:48] busqueda 2---Estudiante [cedula=346346, nombre=Eduardo, apellido=Estupiñan, carrera=Medicina, semestre=2]
+4[2022-07-12 11:04:03] [ INFO ] [ProyectoU2CmApplication:50] ------------------------------------------------------------------------------
+4[2022-07-12 11:04:03] [ INFO ] [ProyectoU2CmApplication:51] busqueda 3---Estudiante [cedula=123454, nombre=Carlos, apellido=Montalvo, carrera=Ing en Computacion, semestre=6]
+4[2022-07-12 11:04:03] [ INFO ] [ProyectoU2CmApplication:53] ------------------------------------------------------------------------------
+4[2022-07-12 11:04:03] [ INFO ] [ProyectoU2CmApplication:56] busqueda 4---Estudiante [cedula=543252, nombre=Miguel, apellido=Santos, carrera=Medicina, semestre=6]
+4[2022-07-12 11:04:03] [ INFO ] [ProyectoU2CmApplication:58] ------------------------------------------------------------------------------
+4[2022-07-12 11:04:27] [ INFO ] [ProyectoU2CmApplication:43] busqueda 1---Estudiante [cedula=234235, nombre=Ramiro, apellido=Pazmiño, carrera=Arquitectura, semestre=8]
+4[2022-07-12 11:04:27] [ INFO ] [ProyectoU2CmApplication:43] busqueda 1---Estudiante [cedula=457893, nombre=Guadalupe, apellido=Perez, carrera=Arquitectura, semestre=8]
+4[2022-07-12 11:04:27] [ INFO ] [ProyectoU2CmApplication:43] busqueda 1---Estudiante [cedula=454878, nombre=Jesus, apellido=Valverde, carrera=Arquitectura, semestre=8]
+4[2022-07-12 11:04:27] [ INFO ] [ProyectoU2CmApplication:45] ------------------------------------------------------------------------------
+4[2022-07-12 11:04:27] [ INFO ] [ProyectoU2CmApplication:48] busqueda 2---Estudiante [cedula=543252, nombre=Miguel, apellido=Santos, carrera=Medicina, semestre=6]
+4[2022-07-12 11:04:27] [ INFO ] [ProyectoU2CmApplication:48] busqueda 2---Estudiante [cedula=345346, nombre=Samanta, apellido=Alba, carrera=Medicina, semestre=4]
+4[2022-07-12 11:04:27] [ INFO ] [ProyectoU2CmApplication:48] busqueda 2---Estudiante [cedula=346346, nombre=Eduardo, apellido=Estupiñan, carrera=Medicina, semestre=2]
+4[2022-07-12 11:04:27] [ INFO ] [ProyectoU2CmApplication:50] ------------------------------------------------------------------------------
+4[2022-07-12 11:04:27] [ INFO ] [ProyectoU2CmApplication:51] busqueda 3---Estudiante [cedula=123454, nombre=Carlos, apellido=Montalvo, carrera=Ing en Computacion, semestre=6]
+4[2022-07-12 11:04:27] [ INFO ] [ProyectoU2CmApplication:53] ------------------------------------------------------------------------------
+4[2022-07-12 11:04:27] [ INFO ] [ProyectoU2CmApplication:56] busqueda 4---Estudiante [cedula=543252, nombre=Miguel, apellido=Santos, carrera=Medicina, semestre=6]
+4[2022-07-12 11:04:27] [ INFO ] [ProyectoU2CmApplication:63] ------------------------------------------------------------------------------
+4[2022-07-12 11:04:27] [ INFO ] [ProyectoU2CmApplication:66] busqueda 6---Estudiante [cedula=234235, nombre=Ramiro, apellido=Pazmiño, carrera=Arquitectura, semestre=8]
+4[2022-07-12 11:04:27] [ INFO ] [ProyectoU2CmApplication:66] busqueda 6---Estudiante [cedula=457893, nombre=Guadalupe, apellido=Perez, carrera=Arquitectura, semestre=8]
+4[2022-07-12 11:04:27] [ INFO ] [ProyectoU2CmApplication:66] busqueda 6---Estudiante [cedula=454878, nombre=Jesus, apellido=Valverde, carrera=Arquitectura, semestre=8]
+4[2022-07-12 11:06:34] [ INFO ] [ProyectoU2CmApplication:43] busqueda 1---Estudiante [cedula=234235, nombre=Ramiro, apellido=Pazmiño, carrera=Arquitectura, semestre=8]
+4[2022-07-12 11:06:34] [ INFO ] [ProyectoU2CmApplication:43] busqueda 1---Estudiante [cedula=457893, nombre=Guadalupe, apellido=Perez, carrera=Arquitectura, semestre=8]
+4[2022-07-12 11:06:34] [ INFO ] [ProyectoU2CmApplication:43] busqueda 1---Estudiante [cedula=454878, nombre=Jesus, apellido=Valverde, carrera=Arquitectura, semestre=8]
+4[2022-07-12 11:06:34] [ INFO ] [ProyectoU2CmApplication:45] ------------------------------------------------------------------------------
+4[2022-07-12 11:06:34] [ INFO ] [ProyectoU2CmApplication:48] busqueda 2---Estudiante [cedula=543252, nombre=Miguel, apellido=Santos, carrera=Medicina, semestre=6]
+4[2022-07-12 11:06:34] [ INFO ] [ProyectoU2CmApplication:48] busqueda 2---Estudiante [cedula=345346, nombre=Samanta, apellido=Alba, carrera=Medicina, semestre=4]
+4[2022-07-12 11:06:34] [ INFO ] [ProyectoU2CmApplication:48] busqueda 2---Estudiante [cedula=346346, nombre=Eduardo, apellido=Estupiñan, carrera=Medicina, semestre=2]
+4[2022-07-12 11:06:34] [ INFO ] [ProyectoU2CmApplication:50] ------------------------------------------------------------------------------
+4[2022-07-12 11:06:34] [ INFO ] [ProyectoU2CmApplication:51] busqueda 3---Estudiante [cedula=123454, nombre=Carlos, apellido=Montalvo, carrera=Ing en Computacion, semestre=6]
+4[2022-07-12 11:06:34] [ INFO ] [ProyectoU2CmApplication:53] ------------------------------------------------------------------------------
+4[2022-07-12 11:06:34] [ INFO ] [ProyectoU2CmApplication:56] busqueda 4---Estudiante [cedula=543252, nombre=Miguel, apellido=Santos, carrera=Medicina, semestre=6]
+4[2022-07-12 11:06:34] [ INFO ] [ProyectoU2CmApplication:63] ------------------------------------------------------------------------------
+4[2022-07-12 11:06:34] [ INFO ] [ProyectoU2CmApplication:66] busqueda 6---Estudiante [cedula=234235, nombre=Ramiro, apellido=Pazmiño, carrera=Arquitectura, semestre=8]
+4[2022-07-12 11:06:34] [ INFO ] [ProyectoU2CmApplication:66] busqueda 6---Estudiante [cedula=457893, nombre=Guadalupe, apellido=Perez, carrera=Arquitectura, semestre=8]
+4[2022-07-12 11:06:34] [ INFO ] [ProyectoU2CmApplication:66] busqueda 6---Estudiante [cedula=454878, nombre=Jesus, apellido=Valverde, carrera=Arquitectura, semestre=8]
+4[2022-07-12 11:07:05] [ INFO ] [ProyectoU2CmApplication:43] busqueda 1---Estudiante [cedula=234235, nombre=Ramiro, apellido=Pazmiño, carrera=Arquitectura, semestre=8]
+4[2022-07-12 11:07:05] [ INFO ] [ProyectoU2CmApplication:43] busqueda 1---Estudiante [cedula=457893, nombre=Guadalupe, apellido=Perez, carrera=Arquitectura, semestre=8]
+4[2022-07-12 11:07:05] [ INFO ] [ProyectoU2CmApplication:43] busqueda 1---Estudiante [cedula=454878, nombre=Jesus, apellido=Valverde, carrera=Arquitectura, semestre=8]
+4[2022-07-12 11:07:05] [ INFO ] [ProyectoU2CmApplication:45] ------------------------------------------------------------------------------
+4[2022-07-12 11:07:05] [ INFO ] [ProyectoU2CmApplication:48] busqueda 2---Estudiante [cedula=543252, nombre=Miguel, apellido=Santos, carrera=Medicina, semestre=6]
+4[2022-07-12 11:07:05] [ INFO ] [ProyectoU2CmApplication:48] busqueda 2---Estudiante [cedula=345346, nombre=Samanta, apellido=Alba, carrera=Medicina, semestre=4]
+4[2022-07-12 11:07:05] [ INFO ] [ProyectoU2CmApplication:48] busqueda 2---Estudiante [cedula=346346, nombre=Eduardo, apellido=Estupiñan, carrera=Medicina, semestre=2]
+4[2022-07-12 11:07:05] [ INFO ] [ProyectoU2CmApplication:50] ------------------------------------------------------------------------------
+4[2022-07-12 11:07:05] [ INFO ] [ProyectoU2CmApplication:51] busqueda 3---Estudiante [cedula=123454, nombre=Carlos, apellido=Montalvo, carrera=Ing en Computacion, semestre=6]
+4[2022-07-12 11:07:05] [ INFO ] [ProyectoU2CmApplication:53] ------------------------------------------------------------------------------
+4[2022-07-12 11:07:05] [ INFO ] [ProyectoU2CmApplication:56] busqueda 4---Estudiante [cedula=543252, nombre=Miguel, apellido=Santos, carrera=Medicina, semestre=6]
+4[2022-07-12 11:07:05] [ INFO ] [ProyectoU2CmApplication:58] ------------------------------------------------------------------------------
+4[2022-07-12 11:09:12] [ INFO ] [ProyectoU2CmApplication:43] busqueda 1---Estudiante [cedula=234235, nombre=Ramiro, apellido=Pazmiño, carrera=Arquitectura, semestre=8]
+4[2022-07-12 11:09:12] [ INFO ] [ProyectoU2CmApplication:43] busqueda 1---Estudiante [cedula=457893, nombre=Guadalupe, apellido=Perez, carrera=Arquitectura, semestre=8]
+4[2022-07-12 11:09:12] [ INFO ] [ProyectoU2CmApplication:43] busqueda 1---Estudiante [cedula=454878, nombre=Jesus, apellido=Valverde, carrera=Arquitectura, semestre=8]
+4[2022-07-12 11:09:12] [ INFO ] [ProyectoU2CmApplication:45] ------------------------------------------------------------------------------
+4[2022-07-12 11:09:12] [ INFO ] [ProyectoU2CmApplication:48] busqueda 2---Estudiante [cedula=543252, nombre=Miguel, apellido=Santos, carrera=Medicina, semestre=6]
+4[2022-07-12 11:09:12] [ INFO ] [ProyectoU2CmApplication:48] busqueda 2---Estudiante [cedula=345346, nombre=Samanta, apellido=Alba, carrera=Medicina, semestre=4]
+4[2022-07-12 11:09:12] [ INFO ] [ProyectoU2CmApplication:48] busqueda 2---Estudiante [cedula=346346, nombre=Eduardo, apellido=Estupiñan, carrera=Medicina, semestre=2]
+4[2022-07-12 11:09:12] [ INFO ] [ProyectoU2CmApplication:50] ------------------------------------------------------------------------------
+4[2022-07-12 11:09:12] [ INFO ] [ProyectoU2CmApplication:51] busqueda 3---Estudiante [cedula=123454, nombre=Carlos, apellido=Montalvo, carrera=Ing en Computacion, semestre=6]
+4[2022-07-12 11:09:12] [ INFO ] [ProyectoU2CmApplication:53] ------------------------------------------------------------------------------
+4[2022-07-12 11:09:12] [ INFO ] [ProyectoU2CmApplication:56] busqueda 4---Estudiante [cedula=543252, nombre=Miguel, apellido=Santos, carrera=Medicina, semestre=6]
+4[2022-07-12 11:09:12] [ INFO ] [ProyectoU2CmApplication:58] ------------------------------------------------------------------------------
+4[2022-07-12 11:09:12] [ INFO ] [ProyectoU2CmApplication:61] busqueda 5---Estudiante [cedula=123454, nombre=Carlos, apellido=Montalvo, carrera=Ing en Computacion, semestre=6]
+4[2022-07-12 11:09:12] [ INFO ] [ProyectoU2CmApplication:63] ------------------------------------------------------------------------------
+4[2022-07-12 11:09:12] [ INFO ] [ProyectoU2CmApplication:66] busqueda 6---Estudiante [cedula=234235, nombre=Ramiro, apellido=Pazmiño, carrera=Arquitectura, semestre=8]
+4[2022-07-12 11:09:12] [ INFO ] [ProyectoU2CmApplication:66] busqueda 6---Estudiante [cedula=457893, nombre=Guadalupe, apellido=Perez, carrera=Arquitectura, semestre=8]
+4[2022-07-12 11:09:12] [ INFO ] [ProyectoU2CmApplication:66] busqueda 6---Estudiante [cedula=454878, nombre=Jesus, apellido=Valverde, carrera=Arquitectura, semestre=8]
 4
