@@ -47,4 +47,20 @@
 4[2022-07-08 19:40:08] [ INFO ] [ProyectoU2CmApplication:43] Cantidad Registros actualizados: 1
 4[2022-07-08 19:41:01] [ INFO ] [ProyectoU2CmApplication:43] Cantidad Registros actualizados: 1
 4[2022-07-08 19:41:01] [ INFO ] [ProyectoU2CmApplication:47] Cantidad Registros actualizados: 2
+4[2022-07-11 19:10:52] [ INFO ] [ProyectoU2CmApplication:35] Persona [id=4, nombre=Juan, genero=Masculino, cedula=534, apellido=Montalvo] forma 1
+4[2022-07-11 19:10:52] [ INFO ] [ProyectoU2CmApplication:37] Persona [id=4, nombre=Juan, genero=Masculino, cedula=534, apellido=Montalvo] forma 2
+4[2022-07-11 19:10:52] [ INFO ] [ProyectoU2CmApplication:39] Persona [id=4, nombre=Juan, genero=Masculino, cedula=534, apellido=Montalvo] forma 3
+4[2022-07-11 19:10:52] [ INFO ] [ProyectoU2CmApplication:41] Persona [id=4, nombre=Juan, genero=Masculino, cedula=534, apellido=Montalvo] forma 4
+4[2022-07-11 19:46:43] [ INFO ] [ProyectoU2CmApplication:36] Persona [id=4, nombre=Juan, genero=Masculino, cedula=534, apellido=Montalvo] forma Query
+4[2022-07-11 19:46:43] [ INFO ] [ProyectoU2CmApplication:38] Persona [id=4, nombre=Juan, genero=Masculino, cedula=534, apellido=Montalvo] forma Typed Query
+4[2022-07-11 19:46:43] [ INFO ] [ProyectoU2CmApplication:40] Persona [id=4, nombre=Juan, genero=Masculino, cedula=534, apellido=Montalvo] forma Named Query
+4[2022-07-11 19:46:43] [ INFO ] [ProyectoU2CmApplication:42] Persona [id=4, nombre=Juan, genero=Masculino, cedula=534, apellido=Montalvo] forma Named Typed Query
+4[2022-07-11 19:46:43] [ INFO ] [ProyectoU2CmApplication:46] listaNombreApellido---Persona [id=2, nombre=Mateo, genero=null, cedula=null, apellido=Montalvo]
+4[2022-07-11 19:46:43] [ INFO ] [ProyectoU2CmApplication:46] listaNombreApellido---Persona [id=3, nombre=Mateo, genero=Masculino, cedula=123, apellido=Montalvo]
+4[2022-07-11 19:55:20] [ INFO ] [ProyectoU2CmApplication:36] Persona [id=4, nombre=Juan, genero=Masculino, cedula=534, apellido=Montalvo] forma Query
+4[2022-07-11 19:55:20] [ INFO ] [ProyectoU2CmApplication:38] Persona [id=4, nombre=Juan, genero=Masculino, cedula=534, apellido=Montalvo] forma Typed Query
+4[2022-07-11 19:55:20] [ INFO ] [ProyectoU2CmApplication:40] Persona [id=4, nombre=Juan, genero=Masculino, cedula=534, apellido=Montalvo] forma Named Query
+4[2022-07-11 19:55:20] [ INFO ] [ProyectoU2CmApplication:42] Persona [id=4, nombre=Juan, genero=Masculino, cedula=534, apellido=Montalvo] forma Named Typed Query
+4[2022-07-11 19:55:20] [ INFO ] [ProyectoU2CmApplication:46] listaNombreApellido---Persona [id=2, nombre=Mateo, genero=null, cedula=null, apellido=Montalvo]
+4[2022-07-11 19:55:20] [ INFO ] [ProyectoU2CmApplication:46] listaNombreApellido---Persona [id=3, nombre=Mateo, genero=Masculino, cedula=123, apellido=Montalvo]
 4
