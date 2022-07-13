@@ -252,4 +252,10 @@
 4[2022-07-12 11:09:12] [ INFO ] [ProyectoU2CmApplication:66] busqueda 6---Estudiante [cedula=234235, nombre=Ramiro, apellido=Pazmiño, carrera=Arquitectura, semestre=8]
 4[2022-07-12 11:09:12] [ INFO ] [ProyectoU2CmApplication:66] busqueda 6---Estudiante [cedula=457893, nombre=Guadalupe, apellido=Perez, carrera=Arquitectura, semestre=8]
 4[2022-07-12 11:09:12] [ INFO ] [ProyectoU2CmApplication:66] busqueda 6---Estudiante [cedula=454878, nombre=Jesus, apellido=Valverde, carrera=Arquitectura, semestre=8]
+4[2022-07-12 19:06:21] [ INFO ] [ProyectoU2CmApplication:41] Persona [id=4, nombre=Juan, genero=Masculino, cedula=534, apellido=Montalvo] forma Native Query
+4[2022-07-12 19:15:07] [ INFO ] [ProyectoU2CmApplication:41] Persona [id=4, nombre=Juan, genero=Masculino, cedula=534, apellido=Montalvo] forma Native Query
+4[2022-07-12 19:16:17] [ INFO ] [ProyectoU2CmApplication:41] Persona [id=4, nombre=Juan, genero=Masculino, cedula=534, apellido=Montalvo] forma Native Query
+4[2022-07-12 19:20:31] [ INFO ] [ProyectoU2CmApplication:41] Persona [id=4, nombre=Juan, genero=Masculino, cedula=534, apellido=Montalvo] forma Native Query
+4[2022-07-12 19:28:16] [ INFO ] [ProyectoU2CmApplication:41] Persona [id=4, nombre=Juan, genero=Masculino, cedula=534, apellido=Montalvo] forma Native Query
+4[2022-07-12 19:28:16] [ INFO ] [ProyectoU2CmApplication:43] Persona [id=4, nombre=Juan, genero=Masculino, cedula=534, apellido=Montalvo] forma Named Native Query
 4

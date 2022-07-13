@@ -36,39 +36,41 @@ public class ProyectoU2CmApplication implements CommandLineRunner{
 	@Override
 	public void run(String... args) throws Exception {
 		
+		///////////taller 20		
+		
+		log.info(this.personaJpaService.buscarPersonaCedulaNativeService("534")+" forma Native Query");
+		
+		log.info(this.personaJpaService.buscarPersonaCedulaNamedNativeService("534")+" forma Named Native Query");
+		
 		///////////tarea 17
 		
-		List<Estudiante> listaSemestre=this.estudianteJpaService.buscarSemestreTypedService(8);
-		for(Estudiante e : listaSemestre) {
-			log.info("busqueda 1---"+e);
-		}
-		log.info("------------------------------------------------------------------------------");
-		List<Estudiante> listaCarrera=this.estudianteJpaService.buscarCarreraTypedService("Medicina");
-		for(Estudiante e : listaCarrera) {
-			log.info("busqueda 2---"+e);
-		}
-		log.info("------------------------------------------------------------------------------");
-		log.info("busqueda 3---"+this.estudianteJpaService
-				.buscarNombreApellidoSemestreNamedService("Carlos", "Montalvo", 6));
-		log.info("------------------------------------------------------------------------------");
-		List<Estudiante> listaNombreCarrera=this.estudianteJpaService.buscarNombreCarreraNamedService("Miguel","Medicina");
-		for(Estudiante e : listaNombreCarrera) {
-			log.info("busqueda 4---"+e);
-		}
-		log.info("------------------------------------------------------------------------------");
-		List<Estudiante> listaApellidoCarrera=this.estudianteJpaService.buscarApellidoCarreraNamedTypedService("Montalvo","Ing en Computacion");
-		for(Estudiante e : listaApellidoCarrera) {
-			log.info("busqueda 5---"+e);
-		}
-		log.info("------------------------------------------------------------------------------");
-		List<Estudiante> listaCarreraSemestre=this.estudianteJpaService.buscarCarreraSemestreNamedTypedService("Arquitectura",8);
-		for(Estudiante e : listaCarreraSemestre) {
-			log.info("busqueda 6---"+e);
-		}
-		
-		
-		
-		
+//		List<Estudiante> listaSemestre=this.estudianteJpaService.buscarSemestreTypedService(8);
+//		for(Estudiante e : listaSemestre) {
+//			log.info("busqueda 1---"+e);
+//		}
+//		log.info("------------------------------------------------------------------------------");
+//		List<Estudiante> listaCarrera=this.estudianteJpaService.buscarCarreraTypedService("Medicina");
+//		for(Estudiante e : listaCarrera) {
+//			log.info("busqueda 2---"+e);
+//		}
+//		log.info("------------------------------------------------------------------------------");
+//		log.info("busqueda 3---"+this.estudianteJpaService
+//				.buscarNombreApellidoSemestreNamedService("Carlos", "Montalvo", 6));
+//		log.info("------------------------------------------------------------------------------");
+//		List<Estudiante> listaNombreCarrera=this.estudianteJpaService.buscarNombreCarreraNamedService("Miguel","Medicina");
+//		for(Estudiante e : listaNombreCarrera) {
+//			log.info("busqueda 4---"+e);
+//		}
+//		log.info("------------------------------------------------------------------------------");
+//		List<Estudiante> listaApellidoCarrera=this.estudianteJpaService.buscarApellidoCarreraNamedTypedService("Montalvo","Ing en Computacion");
+//		for(Estudiante e : listaApellidoCarrera) {
+//			log.info("busqueda 5---"+e);
+//		}
+//		log.info("------------------------------------------------------------------------------");
+//		List<Estudiante> listaCarreraSemestre=this.estudianteJpaService.buscarCarreraSemestreNamedTypedService("Arquitectura",8);
+//		for(Estudiante e : listaCarreraSemestre) {
+//			log.info("busqueda 6---"+e);
+//		}
 		
 		///////////taller 20
 		
