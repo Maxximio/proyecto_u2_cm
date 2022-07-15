@@ -11,7 +11,6 @@ import javax.transaction.Transactional;
 import org.springframework.stereotype.Repository;
 
 import com.example.demo.repository.modelo.Estudiante;
-import com.example.demo.repository.modelo.Persona;
 
 @Repository
 @Transactional
@@ -90,6 +89,41 @@ public class EstudianteJpaRepositoryImpl implements IEstudianteJpaRepository{
 				.createNamedQuery("Estudiente.buscarCarreraSemestre",Estudiante.class);
 		miTypedQuery.setParameter("datoCarrera", carrera);
 		miTypedQuery.setParameter("datoSemestre", semestre);
+		return miTypedQuery.getResultList();
+	}
+
+	@Override
+	public Estudiante buscarCedulaNative(int cedula) {
+		Query miQuery=this.entityManager.createNativeQuery
+				("select * from estudiante where cedula =:datoCedula",Estudiante.class);
+		miQuery.setParameter("datoCedula", cedula);
+		return (Estudiante) miQuery.getSingleResult();
+	}
+	
+	@Override
+	public List<Estudiante> buscarCarreraSemestreNative(String carrera, int semestre) {
+		Query miQuery=this.entityManager.createNativeQuery
+				("select * from estudiante where carrera =:datoCarrera and semestre=:datoSemestre",Estudiante.class);
+		miQuery.setParameter("datoCarrera", carrera);
+		miQuery.setParameter("datoSemestre", semestre);
+		return miQuery.getResultList();
+	}
+
+	@Override
+	public Estudiante buscarNombreApellidoNamedNative(String nombre, String apellido) {
+		TypedQuery<Estudiante>miTypedQuery=this.entityManager
+				.createNamedQuery("Estudiente.buscarNombreApellido",Estudiante.class);
+		miTypedQuery.setParameter("datoNombre", nombre);
+		miTypedQuery.setParameter("datoApellido", apellido);
+		return miTypedQuery.getSingleResult();
+	}
+
+	@Override
+	public List<Estudiante> buscarApellidoCarreraNative(String carrera, String apellido) {
+		TypedQuery<Estudiante>miTypedQuery=this.entityManager
+				.createNamedQuery("Estudiente.buscarApellidoCarreraNative",Estudiante.class);//
+		miTypedQuery.setParameter("datoCarrera", carrera);
+		miTypedQuery.setParameter("datoApellido", apellido);
 		return miTypedQuery.getResultList();
 	}
 

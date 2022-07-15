@@ -29,4 +29,14 @@ public interface IEstudianteJpaRepository {
 	
 	public List<Estudiante> buscarCarreraSemestreNamedTyped(String carrera,int semestre);
 	
+	//tarea 18
+	
+	public Estudiante buscarCedulaNative(int cedula);
+	
+	public List<Estudiante> buscarCarreraSemestreNative(String carrera,int semestre);
+	
+	public Estudiante buscarNombreApellidoNamedNative(String nombre,String apellido);
+	
+	public List<Estudiante> buscarApellidoCarreraNative(String carrera,String apellido);
+	
 }

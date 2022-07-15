@@ -36,11 +36,27 @@ public class ProyectoU2CmApplication implements CommandLineRunner{
 	@Override
 	public void run(String... args) throws Exception {
 		
+		///////////tarea 18
+		
+		log.info(this.estudianteJpaService.buscarCedulaNativeService(543252)+" forma Native Query");
+		
+		List<Estudiante> listaNative=this.estudianteJpaService.buscarCarreraSemestreNativeService("Arquitectura", 8);
+		for(Estudiante e : listaNative) {
+			log.info("forma Native Query---"+e);
+		}
+		
+		log.info(this.estudianteJpaService.buscarNombreApellidoNamedNativeService("Carlos", "Montalvo")+" forma Named Native Query");
+		
+		List<Estudiante> listaNamedNative=this.estudianteJpaService.buscarApellidoCarreraNativeService("Montalvo","Ing en Computacion");
+		for(Estudiante e : listaNamedNative) {
+			log.info("forma Named Native Query---"+e);
+		}
+		
 		///////////taller 20		
 		
-		log.info(this.personaJpaService.buscarPersonaCedulaNativeService("534")+" forma Native Query");
-		
-		log.info(this.personaJpaService.buscarPersonaCedulaNamedNativeService("534")+" forma Named Native Query");
+//		log.info(this.personaJpaService.buscarPersonaCedulaNativeService("534")+" forma Native Query");
+//		
+//		log.info(this.personaJpaService.buscarPersonaCedulaNamedNativeService("534")+" forma Named Native Query");
 		
 		///////////tarea 17
 		

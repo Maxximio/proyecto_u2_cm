@@ -3,6 +3,7 @@ package com.example.demo.service;
 import java.util.List;
 
 import com.example.demo.repository.modelo.Estudiante;
+import com.example.demo.repository.modelo.Persona;
 
 public interface IEstudianteJpaService {
 
@@ -28,4 +29,13 @@ public interface IEstudianteJpaService {
 	
 	public List<Estudiante> buscarCarreraSemestreNamedTypedService(String carrera,int semestre);
 	
+	
+	///////
+	public Estudiante buscarCedulaNativeService(int cedula);
+	
+	public List<Estudiante> buscarCarreraSemestreNativeService(String carrera,int semestre);
+	
+	public Estudiante buscarNombreApellidoNamedNativeService(String nombre,String apellido);
+	
+	public List<Estudiante> buscarApellidoCarreraNativeService(String carrera,String apellido);
 }
