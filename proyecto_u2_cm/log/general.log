@@ -266,4 +266,12 @@
 4[2022-07-15 15:30:56] [ INFO ] [ProyectoU2CmApplication:45] forma Native Query---Estudiante [cedula=457893, nombre=Guadalupe, apellido=Perez, carrera=Arquitectura, semestre=8]
 4[2022-07-15 15:30:56] [ INFO ] [ProyectoU2CmApplication:45] forma Native Query---Estudiante [cedula=454878, nombre=Jesus, apellido=Valverde, carrera=Arquitectura, semestre=8]
 4[2022-07-15 15:30:56] [ INFO ] [ProyectoU2CmApplication:48] Estudiante [cedula=123454, nombre=Carlos, apellido=Montalvo, carrera=Ing en Computacion, semestre=6] forma Named Native Query
+4[2022-07-15 18:47:51] [ INFO ] [ProyectoU2CmApplication:41] Persona [id=4, nombre=Juan, genero=Masculino, cedula=534, apellido=Montalvo] forma criteria
+4[2022-07-15 19:35:26] [ INFO ] [ProyectoU2CmApplication:47] Persona [id=4, nombre=Juan, genero=Masculino, cedula=534, apellido=Montalvo] forma criteria
+4[2022-07-15 19:35:26] [ INFO ] [ProyectoU2CmApplication:49] Persona [id=9, nombre=Carla, genero=Femenino, cedula=1245254, apellido=Gallardo]
+4[2022-07-15 19:36:46] [ INFO ] [ProyectoU2CmApplication:43] Persona [id=9, nombre=Carla, genero=Femenino, cedula=1245254, apellido=Gallardo]
+4[2022-07-15 19:37:17] [ INFO ] [ProyectoU2CmApplication:43] Persona [id=4, nombre=Juan, genero=Masculino, cedula=534, apellido=Montalvo]
+4[2022-07-15 20:09:01] [ INFO ] [ProyectoU2CmApplication:41] Persona [id=4, nombre=Juan, genero=Masculino, cedula=534, apellido=Montalvo] forma criteria
+4[2022-07-15 20:09:01] [ INFO ] [ProyectoU2CmApplication:43] Persona [id=4, nombre=Juan, genero=Masculino, cedula=534, apellido=Montalvo] forma criteria dinamica
+4[2022-07-15 20:09:01] [ INFO ] [ProyectoU2CmApplication:45] Persona [id=9, nombre=Carla, genero=Femenino, cedula=1245254, apellido=Gallardo] forma criteria dinamica
 4

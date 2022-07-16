@@ -36,23 +36,31 @@ public class ProyectoU2CmApplication implements CommandLineRunner{
 	@Override
 	public void run(String... args) throws Exception {
 		
+		///////////taller 22
+		
+		log.info(this.personaJpaService.buscarPersonaCedulaCriteriaService("534")+" forma criteria");
+		
+		log.info(this.personaJpaService.buscarDinamicaService("Juan", "Montalvo", "Masculino")+" forma criteria dinamica");
+		
+		log.info(this.personaJpaService.buscarDinamicaService("Maria", "Gallardo", "Femenino")+" forma criteria dinamica");
+		
 		///////////tarea 18
 		
-		log.info(this.estudianteJpaService.buscarCedulaNativeService(543252)+" forma Native Query");
+//		log.info(this.estudianteJpaService.buscarCedulaNativeService(543252)+" forma Native Query");
+//		
+//		List<Estudiante> listaNative=this.estudianteJpaService.buscarCarreraSemestreNativeService("Arquitectura", 8);
+//		for(Estudiante e : listaNative) {
+//			log.info("forma Native Query---"+e);
+//		}
+//		
+//		log.info(this.estudianteJpaService.buscarNombreApellidoNamedNativeService("Carlos", "Montalvo")+" forma Named Native Query");
+//		
+//		List<Estudiante> listaNamedNative=this.estudianteJpaService.buscarApellidoCarreraNativeService("Montalvo","Ing en Computacion");
+//		for(Estudiante e : listaNamedNative) {
+//			log.info("forma Named Native Query---"+e);
+//		}
 		
-		List<Estudiante> listaNative=this.estudianteJpaService.buscarCarreraSemestreNativeService("Arquitectura", 8);
-		for(Estudiante e : listaNative) {
-			log.info("forma Native Query---"+e);
-		}
-		
-		log.info(this.estudianteJpaService.buscarNombreApellidoNamedNativeService("Carlos", "Montalvo")+" forma Named Native Query");
-		
-		List<Estudiante> listaNamedNative=this.estudianteJpaService.buscarApellidoCarreraNativeService("Montalvo","Ing en Computacion");
-		for(Estudiante e : listaNamedNative) {
-			log.info("forma Named Native Query---"+e);
-		}
-		
-		///////////taller 20		
+		///////////taller 21		
 		
 //		log.info(this.personaJpaService.buscarPersonaCedulaNativeService("534")+" forma Native Query");
 //		

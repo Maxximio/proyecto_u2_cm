@@ -8,6 +8,8 @@ import javax.persistence.Query;
 import javax.persistence.TypedQuery;
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
+import javax.persistence.criteria.Predicate;
+import javax.persistence.criteria.Root;
 import javax.transaction.Transactional;
 
 import org.springframework.stereotype.Repository;
@@ -147,12 +149,42 @@ public class PersonaJpaRepositoryImpl implements IPersonaJpaRepository{
 
 	@Override
 	public Persona buscarPersonaCedulaCriteria(String cedula) {
-//		CriteriaBuilder myBuilder=this.entityManager.getCriteriaBuilder();
-//		
-//		CriteriaQuery<Persona> myQuery=myBuilder.createQuery(Persona.class);
-//		
-//		Root<Persona> personaRoot=myQuery.from(Persona.class);
-		return null;
+		CriteriaBuilder myBuilder=this.entityManager.getCriteriaBuilder();
+		
+		CriteriaQuery<Persona> myQuery=myBuilder.createQuery(Persona.class);
+		
+		Root<Persona> personaRoot=myQuery.from(Persona.class);
+		
+		Predicate p1=myBuilder.equal(personaRoot.get("cedula"), cedula);
+		
+		CriteriaQuery<Persona> myQueryCompleto=myQuery.select(personaRoot).where(p1);
+		
+		TypedQuery<Persona> myQueryFinal=this.entityManager.createQuery(myQueryCompleto);
+		return myQueryFinal.getSingleResult();
+	}
+
+	@Override
+	public Persona buscarDinamica(String nombre, String apellido, String genero) {
+		
+		CriteriaBuilder myCriteria=this.entityManager.getCriteriaBuilder();
+		CriteriaQuery<Persona> myQuery=myCriteria.createQuery(Persona.class);
+		Root<Persona> MyTabla=myQuery.from(Persona.class);//construccion hasta la tabla
+		
+		Predicate p1=myCriteria.equal(MyTabla.get("nombre"), nombre);
+		Predicate p2=myCriteria.equal(MyTabla.get("apellido"), apellido);//condiciones
+		
+		Predicate pFinal=null;//condicion dinamica
+		
+		if(genero.equals("Masculino")) {
+			 pFinal=myCriteria.and(p1,p2);//and
+		}else {
+			pFinal=myCriteria.or(p1,p2);//or
+		}
+		
+		CriteriaQuery<Persona> myQueryCompleto=myQuery.select(MyTabla).where(pFinal);
+		TypedQuery<Persona> myQueryFinal=this.entityManager.createQuery(myQueryCompleto);
+		
+		return myQueryFinal.getSingleResult();
 	}
 
 }

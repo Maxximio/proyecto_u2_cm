@@ -30,8 +30,10 @@ public interface IPersonaJpaRepository {
 	
 	public Persona buscarPersonaCedulaNamedNative(String cedula);//named native 
 	
+	//taller 22
 	public Persona buscarPersonaCedulaCriteria(String cedula);
 	
+	public Persona buscarDinamica(String nombre, String apellido,String genero);
 	
 	
 	public List<Persona> buscarPersonaApellido(String apellido);
@@ -47,7 +49,5 @@ public interface IPersonaJpaRepository {
 	public int eliminarPorGenero(String genero);
 
 	public int actualizarPorApellido(String apellido, String genero);
-
-	
 	
 }
