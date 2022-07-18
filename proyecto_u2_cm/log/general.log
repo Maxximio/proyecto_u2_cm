@@ -274,4 +274,15 @@
 4[2022-07-15 20:09:01] [ INFO ] [ProyectoU2CmApplication:41] Persona [id=4, nombre=Juan, genero=Masculino, cedula=534, apellido=Montalvo] forma criteria
 4[2022-07-15 20:09:01] [ INFO ] [ProyectoU2CmApplication:43] Persona [id=4, nombre=Juan, genero=Masculino, cedula=534, apellido=Montalvo] forma criteria dinamica
 4[2022-07-15 20:09:01] [ INFO ] [ProyectoU2CmApplication:45] Persona [id=9, nombre=Carla, genero=Femenino, cedula=1245254, apellido=Gallardo] forma criteria dinamica
+4[2022-07-18 09:30:31] [ INFO ] [ProyectoU2CmApplication:52] forma Criteria---Estudiante [cedula=454878, nombre=Jesus, apellido=Valverde, carrera=Arquitectura, semestre=8]
+4[2022-07-18 09:30:31] [ INFO ] [ProyectoU2CmApplication:57] forma Criteria Dinamica---Estudiante [cedula=345346, nombre=Samanta, apellido=Alba, carrera=Medicina, semestre=4]
+4[2022-07-18 09:30:31] [ INFO ] [ProyectoU2CmApplication:57] forma Criteria Dinamica---Estudiante [cedula=356858, nombre=Samanta, apellido=Lopez, carrera=Medicina, semestre=7]
+4[2022-07-18 09:31:35] [ INFO ] [ProyectoU2CmApplication:52] forma Criteria---Estudiante [cedula=454878, nombre=Jesus, apellido=Valverde, carrera=Arquitectura, semestre=8]
+4[2022-07-18 09:31:35] [ INFO ] [ProyectoU2CmApplication:52] forma Criteria---Estudiante [cedula=254335, nombre=Jesus, apellido=Valverde, carrera=Ciencias Administrativas, semestre=3]
+4[2022-07-18 09:31:35] [ INFO ] [ProyectoU2CmApplication:57] forma Criteria Dinamica---Estudiante [cedula=345346, nombre=Samanta, apellido=Alba, carrera=Medicina, semestre=4]
+4[2022-07-18 09:31:35] [ INFO ] [ProyectoU2CmApplication:57] forma Criteria Dinamica---Estudiante [cedula=356858, nombre=Samanta, apellido=Lopez, carrera=Medicina, semestre=7]
+4[2022-07-18 09:31:50] [ INFO ] [ProyectoU2CmApplication:43] forma Criteria---Estudiante [cedula=454878, nombre=Jesus, apellido=Valverde, carrera=Arquitectura, semestre=8]
+4[2022-07-18 09:31:50] [ INFO ] [ProyectoU2CmApplication:43] forma Criteria---Estudiante [cedula=254335, nombre=Jesus, apellido=Valverde, carrera=Ciencias Administrativas, semestre=3]
+4[2022-07-18 09:31:50] [ INFO ] [ProyectoU2CmApplication:48] forma Criteria Dinamica---Estudiante [cedula=345346, nombre=Samanta, apellido=Alba, carrera=Medicina, semestre=4]
+4[2022-07-18 09:31:50] [ INFO ] [ProyectoU2CmApplication:48] forma Criteria Dinamica---Estudiante [cedula=356858, nombre=Samanta, apellido=Lopez, carrera=Medicina, semestre=7]
 4

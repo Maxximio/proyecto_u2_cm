@@ -36,13 +36,25 @@ public class ProyectoU2CmApplication implements CommandLineRunner{
 	@Override
 	public void run(String... args) throws Exception {
 		
+		///////////tarea 19
+		
+		List<Estudiante> listaCriteria=this.estudianteJpaService.buscarNombreApellidoCriteriaService("Jesus", "Valverde");
+		for(Estudiante e : listaCriteria) {
+			log.info("forma Criteria---"+e);
+		}
+		
+		List<Estudiante> listaCriteriaD=this.estudianteJpaService.busquedaDinamicaCarreraNombreConSemestreService("Medcina", "Samanta",5);
+		for(Estudiante e : listaCriteriaD) {
+			log.info("forma Criteria Dinamica---"+e);
+		}
+		
 		///////////taller 22
 		
-		log.info(this.personaJpaService.buscarPersonaCedulaCriteriaService("534")+" forma criteria");
-		
-		log.info(this.personaJpaService.buscarDinamicaService("Juan", "Montalvo", "Masculino")+" forma criteria dinamica");
-		
-		log.info(this.personaJpaService.buscarDinamicaService("Maria", "Gallardo", "Femenino")+" forma criteria dinamica");
+//		log.info(this.personaJpaService.buscarPersonaCedulaCriteriaService("534")+" forma criteria");
+//		
+//		log.info(this.personaJpaService.buscarDinamicaService("Juan", "Montalvo", "Masculino")+" forma criteria dinamica");
+//		
+//		log.info(this.personaJpaService.buscarDinamicaService("Maria", "Gallardo", "Femenino")+" forma criteria dinamica");
 		
 		///////////tarea 18
 		

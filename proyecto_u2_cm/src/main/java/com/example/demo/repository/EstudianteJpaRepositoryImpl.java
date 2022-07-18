@@ -6,11 +6,16 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
 import javax.persistence.TypedQuery;
+import javax.persistence.criteria.CriteriaBuilder;
+import javax.persistence.criteria.CriteriaQuery;
+import javax.persistence.criteria.Predicate;
+import javax.persistence.criteria.Root;
 import javax.transaction.Transactional;
 
 import org.springframework.stereotype.Repository;
 
 import com.example.demo.repository.modelo.Estudiante;
+import com.example.demo.repository.modelo.Persona;
 
 @Repository
 @Transactional
@@ -125,6 +130,48 @@ public class EstudianteJpaRepositoryImpl implements IEstudianteJpaRepository{
 		miTypedQuery.setParameter("datoCarrera", carrera);
 		miTypedQuery.setParameter("datoApellido", apellido);
 		return miTypedQuery.getResultList();
+	}
+
+	////////////////tarea 19 criteria
+	@Override
+	public List<Estudiante> buscarNombreApellidoCriteria(String nombre, String apellido) {
+		CriteriaBuilder myBuilder=this.entityManager.getCriteriaBuilder();
+		
+		CriteriaQuery<Estudiante> myQuery=myBuilder.createQuery(Estudiante.class);
+		Root<Estudiante> personaRoot=myQuery.from(Estudiante.class);
+		
+		Predicate p1=myBuilder.equal(personaRoot.get("nombre"), nombre);
+		Predicate p2=myBuilder.equal(personaRoot.get("apellido"), apellido);
+		
+		Predicate p3=myBuilder.and(p1,p2);
+		
+		CriteriaQuery<Estudiante> myQueryCompleto=myQuery.select(personaRoot).where(p3);
+		
+		TypedQuery<Estudiante> myQueryFinal=this.entityManager.createQuery(myQueryCompleto);
+		return myQueryFinal.getResultList();
+	}
+
+	@Override
+	public List<Estudiante> busquedaDinamicaCarreraNombreConSemestre(String carrera,String nombre, int semestre) {
+		CriteriaBuilder myCriteria=this.entityManager.getCriteriaBuilder();
+		CriteriaQuery<Estudiante> myQuery=myCriteria.createQuery(Estudiante.class);
+		Root<Estudiante> MyTabla=myQuery.from(Estudiante.class);
+		
+		Predicate p1=myCriteria.equal(MyTabla.get("carrera"), carrera);
+		Predicate p2=myCriteria.equal(MyTabla.get("nombre"), nombre);
+		
+		Predicate pFinal=null;
+		
+		if(semestre>=6) {
+			 pFinal=myCriteria.and(p1,p2);//and
+		}else {
+			pFinal=myCriteria.or(p1,p2);//or
+		}
+		
+		CriteriaQuery<Estudiante> myQueryCompleto=myQuery.select(MyTabla).where(pFinal);
+		TypedQuery<Estudiante> myQueryFinal=this.entityManager.createQuery(myQueryCompleto);
+		
+		return myQueryFinal.getResultList();
 	}
 
 }

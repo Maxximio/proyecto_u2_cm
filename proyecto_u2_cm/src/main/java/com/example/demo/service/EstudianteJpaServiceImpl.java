@@ -84,6 +84,17 @@ public class EstudianteJpaServiceImpl implements IEstudianteJpaService{
 	public List<Estudiante> buscarApellidoCarreraNativeService(String carrera, String apellido) {
 		return this.estudianteJpaRepository.buscarApellidoCarreraNative(carrera, apellido);
 	}
+
+	@Override
+	public List<Estudiante> buscarNombreApellidoCriteriaService(String nombre, String apellido) {
+		return this.estudianteJpaRepository.buscarNombreApellidoCriteria(nombre, apellido);
+	}
+
+	@Override
+	public List<Estudiante> busquedaDinamicaCarreraNombreConSemestreService(String carrera, String nombre,
+			int semestre) {
+		return this.estudianteJpaRepository.busquedaDinamicaCarreraNombreConSemestre(carrera, nombre, semestre);
+	}
 	
 	
 

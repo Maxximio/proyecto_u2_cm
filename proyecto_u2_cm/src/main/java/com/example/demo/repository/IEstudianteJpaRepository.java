@@ -39,4 +39,10 @@ public interface IEstudianteJpaRepository {
 	
 	public List<Estudiante> buscarApellidoCarreraNative(String carrera,String apellido);
 	
+	//tarea 19
+	
+	public List<Estudiante> buscarNombreApellidoCriteria(String nombre,String apellido);
+	
+	public List<Estudiante> busquedaDinamicaCarreraNombreConSemestre(String carrera,String nombre,int semestre);
+	
 }
