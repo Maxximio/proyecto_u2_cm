@@ -14,8 +14,9 @@ import javax.transaction.Transactional;
 
 import org.springframework.stereotype.Repository;
 
-import com.example.demo.To.PersonaTo;
 import com.example.demo.repository.modelo.Persona;
+import com.example.demo.repository.modelo.PersonaContadorGenero;
+import com.example.demo.repository.modelo.PersonaTo;
 
 @Repository
 @Transactional
@@ -185,6 +186,25 @@ public class PersonaJpaRepositoryImpl implements IPersonaJpaRepository{
 		TypedQuery<Persona> myQueryFinal=this.entityManager.createQuery(myQueryCompleto);
 		
 		return myQueryFinal.getSingleResult();
+	}
+
+	@Override
+	public List<PersonaTo> buscarPersonaSencillaApellido(String apellido) {
+		TypedQuery<PersonaTo>miTypedQuery= this.entityManager
+				.createQuery("select NEW com.example.demo.repository.modelo"
+						+ ".PersonaTo(p.nombre,p.apellido) from Persona p "
+						+ "where p.apellido =:datoApellido",PersonaTo.class);
+		miTypedQuery.setParameter("datoApellido", apellido);
+		return miTypedQuery.getResultList();
+	}
+
+	@Override
+	public List<PersonaContadorGenero> CantidadPorGenero() {
+		TypedQuery<PersonaContadorGenero>miTypedQuery= this.entityManager
+				.createQuery("select new com.example.demo.repository.modelo"
+						+ ".PersonaContadorGenero (p.genero,count(p.genero)) "
+						+ "from Persona p GROUP BY  p.genero",PersonaContadorGenero.class);
+		return miTypedQuery.getResultList();
 	}
 
 }

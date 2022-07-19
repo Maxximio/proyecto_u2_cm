@@ -14,6 +14,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import com.example.demo.repository.modelo.Estudiante;
 import com.example.demo.repository.modelo.Persona;
+import com.example.demo.repository.modelo.PersonaContadorGenero;
+import com.example.demo.repository.modelo.PersonaTo;
 import com.example.demo.service.IEstudianteJpaService;
 import com.example.demo.service.IPersonaJpaService;
 
@@ -36,17 +38,29 @@ public class ProyectoU2CmApplication implements CommandLineRunner{
 	@Override
 	public void run(String... args) throws Exception {
 		
+		///////////taller 23
+		
+		List<PersonaTo> listaSencilla=this.personaJpaService.buscarPersonaSencillaApellidoService("Montalvo");
+		for(PersonaTo e : listaSencilla) {
+			log.info("forma Sencilla---"+e);
+		}
+		
+		List<PersonaContadorGenero> listaSencilla2=this.personaJpaService.CantidadPorGeneroService();
+		for(PersonaContadorGenero e : listaSencilla2) {
+			log.info("forma Sencilla2---"+e);
+		}
+		
 		///////////tarea 19
 		
-		List<Estudiante> listaCriteria=this.estudianteJpaService.buscarNombreApellidoCriteriaService("Jesus", "Valverde");
-		for(Estudiante e : listaCriteria) {
-			log.info("forma Criteria---"+e);
-		}
-		
-		List<Estudiante> listaCriteriaD=this.estudianteJpaService.busquedaDinamicaCarreraNombreConSemestreService("Medcina", "Samanta",5);
-		for(Estudiante e : listaCriteriaD) {
-			log.info("forma Criteria Dinamica---"+e);
-		}
+//		List<Estudiante> listaCriteria=this.estudianteJpaService.buscarNombreApellidoCriteriaService("Jesus", "Valverde");
+//		for(Estudiante e : listaCriteria) {
+//			log.info("forma Criteria---"+e);
+//		}
+//		
+//		List<Estudiante> listaCriteriaD=this.estudianteJpaService.busquedaDinamicaCarreraNombreConSemestreService("Medcina", "Samanta",5);
+//		for(Estudiante e : listaCriteriaD) {
+//			log.info("forma Criteria Dinamica---"+e);
+//		}
 		
 		///////////taller 22
 		

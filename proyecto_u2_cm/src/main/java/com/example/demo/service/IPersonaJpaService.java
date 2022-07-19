@@ -3,6 +3,8 @@ package com.example.demo.service;
 import java.util.List;
 
 import com.example.demo.repository.modelo.Persona;
+import com.example.demo.repository.modelo.PersonaContadorGenero;
+import com.example.demo.repository.modelo.PersonaTo;
 
 public interface IPersonaJpaService {
 
@@ -43,4 +45,8 @@ public interface IPersonaJpaService {
 	public Persona buscarPersonaCedulaCriteriaService(String cedula);
 	
 	public Persona buscarDinamicaService(String nombre, String apellido, String genero);
+	
+	public List<PersonaTo> buscarPersonaSencillaApellidoService(String apellido);
+	
+	public List<PersonaContadorGenero> CantidadPorGeneroService();
 }

@@ -3,6 +3,8 @@ package com.example.demo.repository;
 import java.util.List;
 
 import com.example.demo.repository.modelo.Persona;
+import com.example.demo.repository.modelo.PersonaContadorGenero;
+import com.example.demo.repository.modelo.PersonaTo;
 
 
 public interface IPersonaJpaRepository {
@@ -49,5 +51,10 @@ public interface IPersonaJpaRepository {
 	public int eliminarPorGenero(String genero);
 
 	public int actualizarPorApellido(String apellido, String genero);
+	
+	//taller 23
+	public List<PersonaTo> buscarPersonaSencillaApellido(String apellido);
+	
+	public List<PersonaContadorGenero> CantidadPorGenero();
 	
 }
