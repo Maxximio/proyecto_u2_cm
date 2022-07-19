@@ -15,7 +15,11 @@ import javax.transaction.Transactional;
 import org.springframework.stereotype.Repository;
 
 import com.example.demo.repository.modelo.Estudiante;
+import com.example.demo.repository.modelo.EstudianteContadorCarrera;
+import com.example.demo.repository.modelo.EstudianteTo;
 import com.example.demo.repository.modelo.Persona;
+import com.example.demo.repository.modelo.PersonaContadorGenero;
+import com.example.demo.repository.modelo.PersonaTo;
 
 @Repository
 @Transactional
@@ -172,6 +176,25 @@ public class EstudianteJpaRepositoryImpl implements IEstudianteJpaRepository{
 		TypedQuery<Estudiante> myQueryFinal=this.entityManager.createQuery(myQueryCompleto);
 		
 		return myQueryFinal.getResultList();
+	}
+
+	@Override
+	public List<EstudianteTo> busquedaEstudianteTOApellido(String apellido) {
+		TypedQuery<EstudianteTo>miTypedQuery= this.entityManager
+				.createQuery("select NEW com.example.demo.repository.modelo"
+						+ ".EstudianteTo(e.nombre,e.apellido,e.carrera) from Estudiante e "
+						+ "where e.apellido =:datoApellido",EstudianteTo.class);
+		miTypedQuery.setParameter("datoApellido", apellido);
+		return miTypedQuery.getResultList();
+	}
+
+	@Override
+	public List<EstudianteContadorCarrera> cantidadPorCarrera() {
+		TypedQuery<EstudianteContadorCarrera>miTypedQuery= this.entityManager
+				.createQuery("select new com.example.demo.repository.modelo"
+						+ ".EstudianteContadorCarrera (e.carrera,count(e.carrera)) "
+						+ "from Estudiante e GROUP BY  e.carrera",EstudianteContadorCarrera.class);
+		return miTypedQuery.getResultList();
 	}
 
 }

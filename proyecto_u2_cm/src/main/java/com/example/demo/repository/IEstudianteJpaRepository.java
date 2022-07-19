@@ -3,6 +3,8 @@ package com.example.demo.repository;
 import java.util.List;
 
 import com.example.demo.repository.modelo.Estudiante;
+import com.example.demo.repository.modelo.EstudianteContadorCarrera;
+import com.example.demo.repository.modelo.EstudianteTo;
 
 
 public interface IEstudianteJpaRepository {
@@ -44,5 +46,10 @@ public interface IEstudianteJpaRepository {
 	public List<Estudiante> buscarNombreApellidoCriteria(String nombre,String apellido);
 	
 	public List<Estudiante> busquedaDinamicaCarreraNombreConSemestre(String carrera,String nombre,int semestre);
+	
+	//tarea 20
+	public List<EstudianteTo> busquedaEstudianteTOApellido(String apellido);
+	
+	public List<EstudianteContadorCarrera> cantidadPorCarrera();
 	
 }

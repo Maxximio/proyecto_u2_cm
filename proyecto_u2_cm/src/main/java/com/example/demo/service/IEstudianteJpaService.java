@@ -3,6 +3,8 @@ package com.example.demo.service;
 import java.util.List;
 
 import com.example.demo.repository.modelo.Estudiante;
+import com.example.demo.repository.modelo.EstudianteContadorCarrera;
+import com.example.demo.repository.modelo.EstudianteTo;
 import com.example.demo.repository.modelo.Persona;
 
 public interface IEstudianteJpaService {
@@ -42,5 +44,8 @@ public interface IEstudianteJpaService {
 	public List<Estudiante> buscarNombreApellidoCriteriaService(String nombre,String apellido);
 	
 	public List<Estudiante> busquedaDinamicaCarreraNombreConSemestreService(String carrera,String nombre,int semestre);
+	///
+	public List<EstudianteTo> busquedaEstudianteTOApellidoService(String apellido);
 	
+	public List<EstudianteContadorCarrera> cantidadPorCarreraService();
 }

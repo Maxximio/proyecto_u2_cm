@@ -300,4 +300,10 @@
 4[2022-07-18 19:49:25] [ INFO ] [ProyectoU2CmApplication:50] forma Sencilla2---PersonaContadorGenero [genero=null, numero=0]
 4[2022-07-18 19:49:25] [ INFO ] [ProyectoU2CmApplication:50] forma Sencilla2---PersonaContadorGenero [genero=Masculino, numero=3]
 4[2022-07-18 19:49:25] [ INFO ] [ProyectoU2CmApplication:50] forma Sencilla2---PersonaContadorGenero [genero=Femenino, numero=1]
+4[2022-07-18 22:37:13] [ INFO ] [ProyectoU2CmApplication:47] forma Sencilla---EstudianteTo [nombre=Jesus, apellido=Valverde, carrera=Arquitectura]
+4[2022-07-18 22:37:13] [ INFO ] [ProyectoU2CmApplication:47] forma Sencilla---EstudianteTo [nombre=Jesus, apellido=Valverde, carrera=Ciencias Administrativas]
+4[2022-07-18 22:37:13] [ INFO ] [ProyectoU2CmApplication:52] Contador Carreras---EstudianteContadorCarrera [carrera=Ing en Computacion, contador=1]
+4[2022-07-18 22:37:13] [ INFO ] [ProyectoU2CmApplication:52] Contador Carreras---EstudianteContadorCarrera [carrera=Arquitectura, contador=3]
+4[2022-07-18 22:37:13] [ INFO ] [ProyectoU2CmApplication:52] Contador Carreras---EstudianteContadorCarrera [carrera=Ciencias Administrativas, contador=1]
+4[2022-07-18 22:37:13] [ INFO ] [ProyectoU2CmApplication:52] Contador Carreras---EstudianteContadorCarrera [carrera=Medicina, contador=4]
 4

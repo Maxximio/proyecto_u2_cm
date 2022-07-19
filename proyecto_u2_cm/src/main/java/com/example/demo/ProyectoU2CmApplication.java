@@ -13,6 +13,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import com.example.demo.repository.modelo.Estudiante;
+import com.example.demo.repository.modelo.EstudianteContadorCarrera;
+import com.example.demo.repository.modelo.EstudianteTo;
 import com.example.demo.repository.modelo.Persona;
 import com.example.demo.repository.modelo.PersonaContadorGenero;
 import com.example.demo.repository.modelo.PersonaTo;
@@ -38,17 +40,29 @@ public class ProyectoU2CmApplication implements CommandLineRunner{
 	@Override
 	public void run(String... args) throws Exception {
 		
-		///////////taller 23
+		///////////tarea 20		
 		
-		List<PersonaTo> listaSencilla=this.personaJpaService.buscarPersonaSencillaApellidoService("Montalvo");
-		for(PersonaTo e : listaSencilla) {
+		List<EstudianteTo> listaSencilla=this.estudianteJpaService.busquedaEstudianteTOApellidoService("Valverde");
+		for(EstudianteTo e : listaSencilla) {
 			log.info("forma Sencilla---"+e);
 		}
 		
-		List<PersonaContadorGenero> listaSencilla2=this.personaJpaService.CantidadPorGeneroService();
-		for(PersonaContadorGenero e : listaSencilla2) {
-			log.info("forma Sencilla2---"+e);
+		List<EstudianteContadorCarrera> listaCarrerasCount=this.estudianteJpaService.cantidadPorCarreraService();
+		for(EstudianteContadorCarrera e : listaCarrerasCount) {
+			log.info("Contador Carreras---"+e);
 		}
+		
+		///////////taller 23
+		
+//		List<PersonaTo> listaSencilla=this.personaJpaService.buscarPersonaSencillaApellidoService("Montalvo");
+//		for(PersonaTo e : listaSencilla) {
+//			log.info("forma Sencilla---"+e);
+//		}
+//		
+//		List<PersonaContadorGenero> listaSencilla2=this.personaJpaService.CantidadPorGeneroService();
+//		for(PersonaContadorGenero e : listaSencilla2) {
+//			log.info("forma Sencilla2---"+e);
+//		}
 		
 		///////////tarea 19
 		
