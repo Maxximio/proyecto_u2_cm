@@ -12,12 +12,15 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import com.example.demo.repository.modelo.Ciudadano;
+import com.example.demo.repository.modelo.Empleado;
 import com.example.demo.repository.modelo.Estudiante;
 import com.example.demo.repository.modelo.EstudianteContadorCarrera;
 import com.example.demo.repository.modelo.EstudianteTo;
 import com.example.demo.repository.modelo.Persona;
 import com.example.demo.repository.modelo.PersonaContadorGenero;
 import com.example.demo.repository.modelo.PersonaTo;
+import com.example.demo.service.ICiudadanoService;
 import com.example.demo.service.IEstudianteJpaService;
 import com.example.demo.service.IPersonaJpaService;
 
@@ -33,6 +36,9 @@ public class ProyectoU2CmApplication implements CommandLineRunner{
 	@Autowired
 	private IEstudianteJpaService estudianteJpaService;
 	
+	@Autowired
+	private ICiudadanoService ciudadanoService;
+	
 	public static void main(String[] args) {
 		SpringApplication.run(ProyectoU2CmApplication.class, args);
 	}
@@ -40,17 +46,32 @@ public class ProyectoU2CmApplication implements CommandLineRunner{
 	@Override
 	public void run(String... args) throws Exception {
 		
+		///////////taller 24
+		
+		Ciudadano ciu=new Ciudadano();
+		ciu.setNombre("Mario");
+		ciu.setApellido("Sandobal");
+		
+		Empleado emple=new Empleado();
+		emple.setCodigoIess("casdhsfads");
+		emple.setSalario(new BigDecimal(550.60));
+		emple.setCiudadano(ciu);
+		
+		ciu.setEmpleado(emple);
+		
+		this.ciudadanoService.insertarService(ciu);
+		
 		///////////tarea 20		
 		
-		List<EstudianteTo> listaSencilla=this.estudianteJpaService.busquedaEstudianteTOApellidoService("Valverde");
-		for(EstudianteTo e : listaSencilla) {
-			log.info("forma Sencilla---"+e);
-		}
-		
-		List<EstudianteContadorCarrera> listaCarrerasCount=this.estudianteJpaService.cantidadPorCarreraService();
-		for(EstudianteContadorCarrera e : listaCarrerasCount) {
-			log.info("Contador Carreras---"+e);
-		}
+//		List<EstudianteTo> listaSencilla=this.estudianteJpaService.busquedaEstudianteTOApellidoService("Valverde");
+//		for(EstudianteTo e : listaSencilla) {
+//			log.info("forma Sencilla---"+e);
+//		}
+//		
+//		List<EstudianteContadorCarrera> listaCarrerasCount=this.estudianteJpaService.cantidadPorCarreraService();
+//		for(EstudianteContadorCarrera e : listaCarrerasCount) {
+//			log.info("Contador Carreras---"+e);
+//		}
 		
 		///////////taller 23
 		
