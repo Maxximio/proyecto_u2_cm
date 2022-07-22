@@ -18,21 +18,18 @@ public class CiudadanoServiceImpl implements ICiudadanoService{
 	}
 
 	@Override
-	public Ciudadano buscarEstudianteCedulaService(Integer id) {
-		// TODO Auto-generated method stub
-		return null;
+	public Ciudadano buscarService(Integer id) {
+		return this.ciudadanoRepository.buscar(id);
 	}
 
 	@Override
 	public void actualizarService(Ciudadano ciudadano) {
-		// TODO Auto-generated method stub
-		
+		this.ciudadanoRepository.actualizar(ciudadano);
 	}
 
 	@Override
 	public void eliminarService(Integer id) {
-		// TODO Auto-generated method stub
-		
+		this.ciudadanoRepository.eliminar(id);
 	}
 
 }

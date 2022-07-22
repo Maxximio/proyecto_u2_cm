@@ -17,6 +17,7 @@ import com.example.demo.repository.modelo.Empleado;
 import com.example.demo.repository.modelo.Estudiante;
 import com.example.demo.repository.modelo.EstudianteContadorCarrera;
 import com.example.demo.repository.modelo.EstudianteTo;
+import com.example.demo.repository.modelo.Pasaporte;
 import com.example.demo.repository.modelo.Persona;
 import com.example.demo.repository.modelo.PersonaContadorGenero;
 import com.example.demo.repository.modelo.PersonaTo;
@@ -46,20 +47,45 @@ public class ProyectoU2CmApplication implements CommandLineRunner{
 	@Override
 	public void run(String... args) throws Exception {
 		
-		///////////taller 24
+		///////////tarea 22
 		
 		Ciudadano ciu=new Ciudadano();
 		ciu.setNombre("Mario");
-		ciu.setApellido("Sandobal");
+		ciu.setApellido("Agusto");
+		ciu.setCedula("32453453");
+		ciu.setFechaNacimiento(LocalDateTime.of(2000, 04, 01, 16, 38));
 		
-		Empleado emple=new Empleado();
-		emple.setCodigoIess("casdhsfads");
-		emple.setSalario(new BigDecimal(550.60));
-		emple.setCiudadano(ciu);
+		Pasaporte pasa=new Pasaporte();
+		pasa.setNumero("34636457465");
+		pasa.setFechaEmision(LocalDateTime.of(2014, 03, 10, 13, 53));
+		pasa.setFechaCaducidad(LocalDateTime.of(2023, 03, 10, 13, 53));
+		pasa.setCiudadano(ciu);
 		
-		ciu.setEmpleado(emple);
+		ciu.setPasaporte(pasa);
 		
 		this.ciudadanoService.insertarService(ciu);
+		
+		log.info("el resultado es: "+this.ciudadanoService.buscarService(3));
+		
+		ciu.setNombre("Pedro");
+		this.ciudadanoService.actualizarService(ciu);
+		
+		this.ciudadanoService.eliminarService(3);
+		
+		///////////taller 24
+		
+//		Ciudadano ciu=new Ciudadano();
+//		ciu.setNombre("Mario");
+//		ciu.setApellido("Sandobal");
+//		
+//		Empleado emple=new Empleado();
+//		emple.setCodigoIess("casdhsfads");
+//		emple.setSalario(new BigDecimal(550.60));
+//		emple.setCiudadano(ciu);
+//		
+//		ciu.setEmpleado(emple);
+//		
+//		this.ciudadanoService.insertarService(ciu);
 		
 		///////////tarea 20		
 		

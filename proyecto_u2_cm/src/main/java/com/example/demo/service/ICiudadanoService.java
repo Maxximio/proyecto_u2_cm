@@ -6,7 +6,7 @@ public interface ICiudadanoService {
 
 	public void insertarService(Ciudadano ciudadano);
 	
-	public Ciudadano buscarEstudianteCedulaService(Integer id);
+	public Ciudadano buscarService(Integer id);
 	
 	public void actualizarService(Ciudadano ciudadano);
 	

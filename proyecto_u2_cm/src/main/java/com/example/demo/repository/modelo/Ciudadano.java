@@ -1,12 +1,13 @@
 package com.example.demo.repository.modelo;
 
+import java.time.LocalDateTime;
+
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
@@ -27,8 +28,17 @@ public class Ciudadano {
 	@Column(name = "ciud_apellido")
 	private String apellido;
 	
+	@Column(name = "ciud_cedula")
+	private String cedula;
+	
+	@Column(name = "ciud_fecha_nacimiento")
+	private LocalDateTime fechaNacimiento;
+	
+//	@OneToOne(mappedBy = "ciudadano",cascade = CascadeType.ALL)
+//	private Empleado empleado;
+	
 	@OneToOne(mappedBy = "ciudadano",cascade = CascadeType.ALL)
-	private Empleado empleado;
+	private Pasaporte pasaporte;
 	
 	//set y get
 	public Integer getId() {
@@ -50,16 +60,45 @@ public class Ciudadano {
 		this.apellido = apellido;
 	}
 	
-	public Empleado getEmpleado() {
-		return empleado;
+//	public Empleado getEmpleado() {
+//		return empleado;
+//	}
+//	public void setEmpleado(Empleado empleado) {
+//		this.empleado = empleado;
+//	}
+	
+	public String getCedula() {
+		return cedula;
 	}
-	public void setEmpleado(Empleado empleado) {
-		this.empleado = empleado;
+
+	public void setCedula(String cedula) {
+		this.cedula = cedula;
+	}
+
+	public LocalDateTime getFechaNacimiento() {
+		return fechaNacimiento;
+	}
+
+	public void setFechaNacimiento(LocalDateTime fechaNacimiento) {
+		this.fechaNacimiento = fechaNacimiento;
+	}
+
+	public Pasaporte getPasaporte() {
+		return pasaporte;
+	}
+
+	public void setPasaporte(Pasaporte pasaporte) {
+		this.pasaporte = pasaporte;
 	}
 	
 	//to string
+//	@Override
+//	public String toString() {
+//		return "Ciudadano [id=" + id + ", nombre=" + nombre + ", apellido=" + apellido + "]";
+//	}
 	@Override
 	public String toString() {
-		return "Ciudadano [id=" + id + ", nombre=" + nombre + ", apellido=" + apellido + "]";
+		return "Ciudadano [id=" + id + ", nombre=" + nombre + ", apellido=" + apellido + ", cedula=" + cedula
+				+ ", fechaNacimiento=" + fechaNacimiento + ", pasaporte=" + pasaporte + "]";
 	}
 }

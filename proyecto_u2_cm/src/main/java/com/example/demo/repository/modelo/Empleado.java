@@ -29,9 +29,9 @@ public class Empleado {
 	@Column(name = "empl_salario")
 	private BigDecimal salario;
 
-	@OneToOne (cascade = CascadeType.ALL)
-	@JoinColumn(name = "empl_id_ciudadano")
-	private Ciudadano ciudadano;
+//	@OneToOne (cascade = CascadeType.ALL)
+//	@JoinColumn(name = "empl_id_ciudadano")
+//	private Ciudadano ciudadano;
 	
 	//set y get
 	public Integer getId() {
@@ -58,13 +58,13 @@ public class Empleado {
 		this.salario = salario;
 	}
 
-	public Ciudadano getCiudadano() {
-		return ciudadano;
-	}
-
-	public void setCiudadano(Ciudadano ciudadano) {
-		this.ciudadano = ciudadano;
-	}
+//	public Ciudadano getCiudadano() {
+//		return ciudadano;
+//	}
+//
+//	public void setCiudadano(Ciudadano ciudadano) {
+//		this.ciudadano = ciudadano;
+//	}
 
 	//to string
 	@Override
