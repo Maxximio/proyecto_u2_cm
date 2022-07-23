@@ -1,4 +1,4 @@
-package com.example.demo.repository.modelo;
+package com.example.demo.repository.modelo.oneToOne;
 
 import java.math.BigDecimal;
 

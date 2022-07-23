@@ -4,6 +4,7 @@ import org.apache.log4j.Logger;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 
 import org.apache.log4j.LogManager;
@@ -12,17 +13,22 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import com.example.demo.repository.modelo.Ciudadano;
-import com.example.demo.repository.modelo.Empleado;
+import com.example.demo.repository.IHabitacionRepository;
+import com.example.demo.repository.IHotelRepository;
 import com.example.demo.repository.modelo.Estudiante;
 import com.example.demo.repository.modelo.EstudianteContadorCarrera;
 import com.example.demo.repository.modelo.EstudianteTo;
-import com.example.demo.repository.modelo.Pasaporte;
 import com.example.demo.repository.modelo.Persona;
 import com.example.demo.repository.modelo.PersonaContadorGenero;
 import com.example.demo.repository.modelo.PersonaTo;
+import com.example.demo.repository.modelo.oneToMany.Habitacion;
+import com.example.demo.repository.modelo.oneToMany.Hotel;
+import com.example.demo.repository.modelo.oneToOne.Ciudadano;
+import com.example.demo.repository.modelo.oneToOne.Empleado;
+import com.example.demo.repository.modelo.oneToOne.Pasaporte;
 import com.example.demo.service.ICiudadanoService;
 import com.example.demo.service.IEstudianteJpaService;
+import com.example.demo.service.IHotelService;
 import com.example.demo.service.IPersonaJpaService;
 
 
@@ -32,13 +38,10 @@ public class ProyectoU2CmApplication implements CommandLineRunner{
 	private static final Logger log=LogManager.getLogger(ProyectoU2CmApplication.class);
 	
 	@Autowired
-	private IPersonaJpaService personaJpaService;
+	private IHotelService hotelService;
 	
 	@Autowired
-	private IEstudianteJpaService estudianteJpaService;
-	
-	@Autowired
-	private ICiudadanoService ciudadanoService;
+	private IHabitacionRepository habitacionRepository;
 	
 	public static void main(String[] args) {
 		SpringApplication.run(ProyectoU2CmApplication.class, args);
@@ -47,30 +50,47 @@ public class ProyectoU2CmApplication implements CommandLineRunner{
 	@Override
 	public void run(String... args) throws Exception {
 		
+		///////////taller 25
+		
+		Hotel hot=new Hotel();
+		hot.setId(2);
+		
+		Habitacion habi=new Habitacion();
+		habi.setNumero("21");
+		habi.setPiso("2");
+		habi.setTipo("Familiar");
+		
+		habi.setHotel(hot);
+		
+		//this.hotelService.insertarService(hot);
+		
+		this.habitacionRepository.insertar(habi);
+		
+		
 		///////////tarea 22
 		
-		Ciudadano ciu=new Ciudadano();
-		ciu.setNombre("Mario");
-		ciu.setApellido("Agusto");
-		ciu.setCedula("32453453");
-		ciu.setFechaNacimiento(LocalDateTime.of(2000, 04, 01, 16, 38));
-		
-		Pasaporte pasa=new Pasaporte();
-		pasa.setNumero("34636457465");
-		pasa.setFechaEmision(LocalDateTime.of(2014, 03, 10, 13, 53));
-		pasa.setFechaCaducidad(LocalDateTime.of(2023, 03, 10, 13, 53));
-		pasa.setCiudadano(ciu);
-		
-		ciu.setPasaporte(pasa);
-		
-		this.ciudadanoService.insertarService(ciu);
-		
-		log.info("el resultado es: "+this.ciudadanoService.buscarService(3));
-		
-		ciu.setNombre("Pedro");
-		this.ciudadanoService.actualizarService(ciu);
-		
-		this.ciudadanoService.eliminarService(3);
+//		Ciudadano ciu=new Ciudadano();
+//		ciu.setNombre("Mario");
+//		ciu.setApellido("Agusto");
+//		ciu.setCedula("32453453");
+//		ciu.setFechaNacimiento(LocalDateTime.of(2000, 04, 01, 16, 38));
+//		
+//		Pasaporte pasa=new Pasaporte();
+//		pasa.setNumero("34636457465");
+//		pasa.setFechaEmision(LocalDateTime.of(2014, 03, 10, 13, 53));
+//		pasa.setFechaCaducidad(LocalDateTime.of(2023, 03, 10, 13, 53));
+//		pasa.setCiudadano(ciu);
+//		
+//		ciu.setPasaporte(pasa);
+//		
+//		this.ciudadanoService.insertarService(ciu);
+//		
+//		log.info("el resultado es: "+this.ciudadanoService.buscarService(3));
+//		
+//		ciu.setNombre("Pedro");
+//		this.ciudadanoService.actualizarService(ciu);
+//		
+//		this.ciudadanoService.eliminarService(3);
 		
 		///////////taller 24
 		

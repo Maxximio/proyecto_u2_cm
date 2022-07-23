@@ -1,6 +1,6 @@
 package com.example.demo.repository;
 
-import com.example.demo.repository.modelo.Ciudadano;
+import com.example.demo.repository.modelo.oneToOne.Ciudadano;
 
 public interface ICiudadanoRepository {
 

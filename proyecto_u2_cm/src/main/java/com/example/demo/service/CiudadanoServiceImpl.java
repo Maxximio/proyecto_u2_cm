@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.example.demo.repository.ICiudadanoRepository;
-import com.example.demo.repository.modelo.Ciudadano;
+import com.example.demo.repository.modelo.oneToOne.Ciudadano;
 
 @Service
 public class CiudadanoServiceImpl implements ICiudadanoService{
