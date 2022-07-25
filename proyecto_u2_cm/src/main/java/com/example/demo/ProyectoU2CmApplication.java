@@ -23,6 +23,8 @@ import com.example.demo.repository.modelo.PersonaContadorGenero;
 import com.example.demo.repository.modelo.PersonaTo;
 import com.example.demo.repository.modelo.oneToMany.Habitacion;
 import com.example.demo.repository.modelo.oneToMany.Hotel;
+import com.example.demo.repository.modelo.oneToMany.Mesero;
+import com.example.demo.repository.modelo.oneToMany.Restaurante;
 import com.example.demo.repository.modelo.oneToOne.Ciudadano;
 import com.example.demo.repository.modelo.oneToOne.Empleado;
 import com.example.demo.repository.modelo.oneToOne.Pasaporte;
@@ -30,6 +32,7 @@ import com.example.demo.service.ICiudadanoService;
 import com.example.demo.service.IEstudianteJpaService;
 import com.example.demo.service.IHotelService;
 import com.example.demo.service.IPersonaJpaService;
+import com.example.demo.service.IRestauranteService;
 
 
 @SpringBootApplication
@@ -43,6 +46,9 @@ public class ProyectoU2CmApplication implements CommandLineRunner{
 	@Autowired
 	private IHabitacionRepository habitacionRepository;
 	
+	@Autowired
+	private IRestauranteService restauranteService;
+	
 	public static void main(String[] args) {
 		SpringApplication.run(ProyectoU2CmApplication.class, args);
 	}
@@ -50,21 +56,43 @@ public class ProyectoU2CmApplication implements CommandLineRunner{
 	@Override
 	public void run(String... args) throws Exception {
 		
+		///////////tarea 23
+
+		Restaurante res=new Restaurante();
+		res.setNombre("Ratatoulle");
+		res.setDireccion("Venezuela y Amazonas");
+		
+		Mesero mes=new Mesero();
+		mes.setCedula("32465");
+		mes.setNombre("Carlos");
+		mes.setApellido("Montalvo");
+		mes.setRestaurante(res);
+		
+		this.restauranteService.insertar(res);
+		
+		res.setNombre("Ratatoullie");
+		this.restauranteService.actualizar(res);
+		this.restauranteService.buscar(1);
+		
+		this.restauranteService.eliminar(1);
+		
+		//res.setMesero(null);
+		
 		///////////taller 25
 		
-		Hotel hot=new Hotel();
-		hot.setId(2);
-		
-		Habitacion habi=new Habitacion();
-		habi.setNumero("21");
-		habi.setPiso("2");
-		habi.setTipo("Familiar");
-		
-		habi.setHotel(hot);
-		
-		//this.hotelService.insertarService(hot);
-		
-		this.habitacionRepository.insertar(habi);
+//		Hotel hot=new Hotel();
+//		hot.setId(2);
+//		
+//		Habitacion habi=new Habitacion();
+//		habi.setNumero("21");
+//		habi.setPiso("2");
+//		habi.setTipo("Familiar");
+//		
+//		habi.setHotel(hot);
+//		
+//		//this.hotelService.insertarService(hot);
+//		
+//		this.habitacionRepository.insertar(habi);
 		
 		
 		///////////tarea 22
