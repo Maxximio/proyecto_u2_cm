@@ -5,7 +5,9 @@ import org.apache.log4j.Logger;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 import org.apache.log4j.LogManager;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,6 +23,8 @@ import com.example.demo.repository.modelo.EstudianteTo;
 import com.example.demo.repository.modelo.Persona;
 import com.example.demo.repository.modelo.PersonaContadorGenero;
 import com.example.demo.repository.modelo.PersonaTo;
+import com.example.demo.repository.modelo.ManyToMany.Autor;
+import com.example.demo.repository.modelo.ManyToMany.Libro;
 import com.example.demo.repository.modelo.oneToMany.Habitacion;
 import com.example.demo.repository.modelo.oneToMany.Hotel;
 import com.example.demo.repository.modelo.oneToMany.Mesero;
@@ -31,6 +35,7 @@ import com.example.demo.repository.modelo.oneToOne.Pasaporte;
 import com.example.demo.service.ICiudadanoService;
 import com.example.demo.service.IEstudianteJpaService;
 import com.example.demo.service.IHotelService;
+import com.example.demo.service.ILibroService;
 import com.example.demo.service.IPersonaJpaService;
 import com.example.demo.service.IRestauranteService;
 
@@ -49,6 +54,9 @@ public class ProyectoU2CmApplication implements CommandLineRunner{
 	@Autowired
 	private IRestauranteService restauranteService;
 	
+	@Autowired
+	private ILibroService libroService;
+	
 	public static void main(String[] args) {
 		SpringApplication.run(ProyectoU2CmApplication.class, args);
 	}
@@ -56,25 +64,44 @@ public class ProyectoU2CmApplication implements CommandLineRunner{
 	@Override
 	public void run(String... args) throws Exception {
 		
+		///////////taller 26
+		
+		Libro lib=new Libro();
+		lib.setTitulo("La Biblia");
+		lib.setCantidadPaginas(1200);
+		
+		Autor aut1=new Autor();
+		aut1.setNombre("Jesus");
+		
+		Autor aut2=new Autor();
+		aut2.setNombre("Pedro");
+		
+		Set<Autor> autores=new HashSet<>();
+		autores.add(aut1);
+		autores.add(aut2);
+		
+		lib.setAutores(autores);
+		this.libroService.insertarService(lib);
+		
 		///////////tarea 23
 
-		Restaurante res=new Restaurante();
-		res.setNombre("Ratatoulle");
-		res.setDireccion("Venezuela y Amazonas");
-		
-		Mesero mes=new Mesero();
-		mes.setCedula("32465");
-		mes.setNombre("Carlos");
-		mes.setApellido("Montalvo");
-		mes.setRestaurante(res);
-		
-		this.restauranteService.insertar(res);
-		
-		res.setNombre("Ratatoullie");
-		this.restauranteService.actualizar(res);
-		this.restauranteService.buscar(1);
-		
-		this.restauranteService.eliminar(1);
+//		Restaurante res=new Restaurante();
+//		res.setNombre("Ratatoulle");
+//		res.setDireccion("Venezuela y Amazonas");
+//		
+//		Mesero mes=new Mesero();
+//		mes.setCedula("32465");
+//		mes.setNombre("Carlos");
+//		mes.setApellido("Montalvo");
+//		mes.setRestaurante(res);
+//		
+//		this.restauranteService.insertar(res);
+//		
+//		res.setNombre("Ratatoullie");
+//		this.restauranteService.actualizar(res);
+//		this.restauranteService.buscar(1);
+//		
+//		this.restauranteService.eliminar(1);
 		
 		//res.setMesero(null);
 		
