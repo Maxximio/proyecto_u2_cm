@@ -95,7 +95,7 @@ public class ProyectoU2CmApplication implements CommandLineRunner{
 		//List<Autor2libro2> uniones=new ArrayList<Autor2libro2>();
 		//uniones.add(mid1);
 		//uniones.add(mid2);
-		//libro2.setAutor2libro2(uniones);
+		//libro2.setAutor2libro2(uniones);//
 		
 		this.libro2Service.insertarService(libro2);
 		
