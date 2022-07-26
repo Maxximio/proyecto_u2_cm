@@ -17,27 +17,26 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import com.example.demo.repository.IHabitacionRepository;
 import com.example.demo.repository.IHotelRepository;
-import com.example.demo.repository.modelo.Estudiante;
-import com.example.demo.repository.modelo.EstudianteContadorCarrera;
-import com.example.demo.repository.modelo.EstudianteTo;
 import com.example.demo.repository.modelo.Persona;
 import com.example.demo.repository.modelo.PersonaContadorGenero;
 import com.example.demo.repository.modelo.PersonaTo;
 import com.example.demo.repository.modelo.ManyToMany.Autor;
 import com.example.demo.repository.modelo.ManyToMany.Libro;
+import com.example.demo.repository.modelo.oneToMany.Autor2;
+import com.example.demo.repository.modelo.oneToMany.Autor2libro2;
 import com.example.demo.repository.modelo.oneToMany.Habitacion;
 import com.example.demo.repository.modelo.oneToMany.Hotel;
-import com.example.demo.repository.modelo.oneToMany.Mesero;
-import com.example.demo.repository.modelo.oneToMany.Restaurante;
+import com.example.demo.repository.modelo.oneToMany.Libro2;
 import com.example.demo.repository.modelo.oneToOne.Ciudadano;
 import com.example.demo.repository.modelo.oneToOne.Empleado;
 import com.example.demo.repository.modelo.oneToOne.Pasaporte;
+import com.example.demo.service.IAutor2Service;
+import com.example.demo.service.IAutorLibroService;
 import com.example.demo.service.ICiudadanoService;
-import com.example.demo.service.IEstudianteJpaService;
 import com.example.demo.service.IHotelService;
+import com.example.demo.service.ILibro2Service;
 import com.example.demo.service.ILibroService;
 import com.example.demo.service.IPersonaJpaService;
-import com.example.demo.service.IRestauranteService;
 
 
 @SpringBootApplication
@@ -52,10 +51,13 @@ public class ProyectoU2CmApplication implements CommandLineRunner{
 	private IHabitacionRepository habitacionRepository;
 	
 	@Autowired
-	private IRestauranteService restauranteService;
+	private ILibro2Service libro2Service;
 	
 	@Autowired
-	private ILibroService libroService;
+	private IAutor2Service autor2Service;
+	
+	@Autowired
+	private IAutorLibroService autorLibroService;
 	
 	public static void main(String[] args) {
 		SpringApplication.run(ProyectoU2CmApplication.class, args);
@@ -64,24 +66,89 @@ public class ProyectoU2CmApplication implements CommandLineRunner{
 	@Override
 	public void run(String... args) throws Exception {
 		
+		///////////tarea 24
+		
+		
+		////PARTE 1
+		Libro2 libro2=new Libro2();
+		libro2.setTitulo("La Biblia");
+		libro2.setCantidadPaginas(1200);
+		
+		Autor2 autor2=new Autor2();
+		autor2.setNombre("Miguel Ramirez");
+		
+		Autor2 autor22=new Autor2();
+		autor22.setNombre("Julian Vanegas");
+		
+		Autor2libro2 mid1=new Autor2libro2();
+		mid1.setAutor2(autor22);
+		mid1.setLibro2(libro2);
+		
+		this.autorLibroService.insertarService(mid1);
+		
+		Autor2libro2 mid2=new Autor2libro2();
+		mid2.setAutor2(autor2);
+		mid2.setLibro2(libro2);
+		
+		this.autorLibroService.insertarService(mid2);
+		
+		//List<Autor2libro2> uniones=new ArrayList<Autor2libro2>();
+		//uniones.add(mid1);
+		//uniones.add(mid2);
+		//libro2.setAutor2libro2(uniones);
+		
+		this.libro2Service.insertarService(libro2);
+		
+		this.autor2Service.insertarService(autor2);
+		this.autor2Service.insertarService(autor22);
+		
+		////PARTE 2	
+		
+		Autor2 autor23=new Autor2();
+		autor23.setNombre("Marcelo Vanegas");
+		
+		Libro2 libro22=new Libro2();
+		libro22.setTitulo("Programacion A");
+		libro22.setCantidadPaginas(2200);
+		
+		Libro2 libro23=new Libro2();
+		libro23.setTitulo("Programacion B");
+		libro23.setCantidadPaginas(2200);
+		
+		Autor2libro2 mid3=new Autor2libro2();
+		mid3.setAutor2(autor23);
+		mid3.setLibro2(libro22);
+		this.autorLibroService.insertarService(mid3);
+		
+		Autor2libro2 mid4=new Autor2libro2();
+		mid4.setAutor2(autor23);
+		mid4.setLibro2(libro23);
+		this.autorLibroService.insertarService(mid4);
+		
+		this.libro2Service.insertarService(libro22);
+		this.libro2Service.insertarService(libro23);
+		
+		this.autor2Service.insertarService(autor23);
+		
+		
 		///////////taller 26
 		
-		Libro lib=new Libro();
-		lib.setTitulo("La Biblia");
-		lib.setCantidadPaginas(1200);
-		
-		Autor aut1=new Autor();
-		aut1.setNombre("Jesus");
-		
-		Autor aut2=new Autor();
-		aut2.setNombre("Pedro");
-		
-		Set<Autor> autores=new HashSet<>();
-		autores.add(aut1);
-		autores.add(aut2);
-		
-		lib.setAutores(autores);
-		this.libroService.insertarService(lib);
+//		Libro lib=new Libro();
+//		lib.setTitulo("La Biblia");
+//		lib.setCantidadPaginas(1200);
+//		
+//		Autor aut1=new Autor();
+//		aut1.setNombre("Jesus");
+//		
+//		Autor aut2=new Autor();
+//		aut2.setNombre("Pedro");
+//		
+//		Set<Autor> autores=new HashSet<>();
+//		autores.add(aut1);
+//		autores.add(aut2);
+//		
+//		lib.setAutores(autores);
+//		this.libroService.insertarService(lib);
 		
 		///////////tarea 23
 
