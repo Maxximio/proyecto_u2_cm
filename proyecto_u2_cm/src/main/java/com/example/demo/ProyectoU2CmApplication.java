@@ -15,6 +15,9 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import com.example.demo.cajero.repository.modelo.DetalleFactura;
+import com.example.demo.cajero.repository.modelo.Factura;
+import com.example.demo.cajero.service.IFacturaService;
 import com.example.demo.repository.IHabitacionRepository;
 import com.example.demo.repository.IHotelRepository;
 import com.example.demo.repository.modelo.Persona;
@@ -48,16 +51,7 @@ public class ProyectoU2CmApplication implements CommandLineRunner{
 	private IHotelService hotelService;
 	
 	@Autowired
-	private IHabitacionRepository habitacionRepository;
-	
-	@Autowired
-	private ILibro2Service libro2Service;
-	
-	@Autowired
-	private IAutor2Service autor2Service;
-	
-	@Autowired
-	private IAutorLibroService autorLibroService;
+	private IFacturaService facturaService;
 	
 	public static void main(String[] args) {
 		SpringApplication.run(ProyectoU2CmApplication.class, args);
@@ -66,69 +60,82 @@ public class ProyectoU2CmApplication implements CommandLineRunner{
 	@Override
 	public void run(String... args) throws Exception {
 		
+		///////////taller 27
+		
+		Factura fact=this.facturaService.buscarService(1);
+		
+		log.info("Numero "+fact.getNumero());
+		log.info("Numero "+fact.getFecha());
+		
+		log.info("Cliente "+fact.getCliente().getNumeroTarjeta());
+		
+		List<DetalleFactura> detalles=new  Factura().getDetalles();
+		for(DetalleFactura deta : detalles) {
+			log.info("Los detalles son: "+deta);
+		}
+		
 		///////////tarea 24
 		
-		
-		////PARTE 1
-		Libro2 libro2=new Libro2();
-		libro2.setTitulo("La Biblia");
-		libro2.setCantidadPaginas(1200);
-		
-		Autor2 autor2=new Autor2();
-		autor2.setNombre("Miguel Ramirez");
-		
-		Autor2 autor22=new Autor2();
-		autor22.setNombre("Julian Vanegas");
-		
-		Autor2libro2 mid1=new Autor2libro2();
-		mid1.setAutor2(autor22);
-		mid1.setLibro2(libro2);
-		
-		this.autorLibroService.insertarService(mid1);
-		
-		Autor2libro2 mid2=new Autor2libro2();
-		mid2.setAutor2(autor2);
-		mid2.setLibro2(libro2);
-		
-		this.autorLibroService.insertarService(mid2);
-		
-		//List<Autor2libro2> uniones=new ArrayList<Autor2libro2>();
-		//uniones.add(mid1);
-		//uniones.add(mid2);
-		//libro2.setAutor2libro2(uniones);//
-		
-		this.libro2Service.insertarService(libro2);
-		
-		this.autor2Service.insertarService(autor2);
-		this.autor2Service.insertarService(autor22);
-		
-		////PARTE 2	
-		
-		Autor2 autor23=new Autor2();
-		autor23.setNombre("Marcelo Vanegas");
-		
-		Libro2 libro22=new Libro2();
-		libro22.setTitulo("Programacion A");
-		libro22.setCantidadPaginas(2200);
-		
-		Libro2 libro23=new Libro2();
-		libro23.setTitulo("Programacion B");
-		libro23.setCantidadPaginas(2200);
-		
-		Autor2libro2 mid3=new Autor2libro2();
-		mid3.setAutor2(autor23);
-		mid3.setLibro2(libro22);
-		this.autorLibroService.insertarService(mid3);
-		
-		Autor2libro2 mid4=new Autor2libro2();
-		mid4.setAutor2(autor23);
-		mid4.setLibro2(libro23);
-		this.autorLibroService.insertarService(mid4);
-		
-		this.libro2Service.insertarService(libro22);
-		this.libro2Service.insertarService(libro23);
-		
-		this.autor2Service.insertarService(autor23);
+//		////PARTE 1
+//		Libro2 libro2=new Libro2();
+//		libro2.setTitulo("La Biblia");
+//		libro2.setCantidadPaginas(1200);
+//		
+//		Autor2 autor2=new Autor2();
+//		autor2.setNombre("Miguel Ramirez");
+//		
+//		Autor2 autor22=new Autor2();
+//		autor22.setNombre("Julian Vanegas");
+//		
+//		Autor2libro2 mid1=new Autor2libro2();
+//		mid1.setAutor2(autor22);
+//		mid1.setLibro2(libro2);
+//		
+//		this.autorLibroService.insertarService(mid1);
+//		
+//		Autor2libro2 mid2=new Autor2libro2();
+//		mid2.setAutor2(autor2);
+//		mid2.setLibro2(libro2);
+//		
+//		this.autorLibroService.insertarService(mid2);
+//		
+//		//List<Autor2libro2> uniones=new ArrayList<Autor2libro2>();
+//		//uniones.add(mid1);
+//		//uniones.add(mid2);
+//		//libro2.setAutor2libro2(uniones);//
+//		
+//		this.libro2Service.insertarService(libro2);
+//		
+//		this.autor2Service.insertarService(autor2);
+//		this.autor2Service.insertarService(autor22);
+//		
+//		////PARTE 2	
+//		
+//		Autor2 autor23=new Autor2();
+//		autor23.setNombre("Marcelo Vanegas");
+//		
+//		Libro2 libro22=new Libro2();
+//		libro22.setTitulo("Programacion A");
+//		libro22.setCantidadPaginas(2200);
+//		
+//		Libro2 libro23=new Libro2();
+//		libro23.setTitulo("Programacion B");
+//		libro23.setCantidadPaginas(2200);
+//		
+//		Autor2libro2 mid3=new Autor2libro2();
+//		mid3.setAutor2(autor23);
+//		mid3.setLibro2(libro22);
+//		this.autorLibroService.insertarService(mid3);
+//		
+//		Autor2libro2 mid4=new Autor2libro2();
+//		mid4.setAutor2(autor23);
+//		mid4.setLibro2(libro23);
+//		this.autorLibroService.insertarService(mid4);
+//		
+//		this.libro2Service.insertarService(libro22);
+//		this.libro2Service.insertarService(libro23);
+//		
+//		this.autor2Service.insertarService(autor23);
 		
 		
 		///////////taller 26
